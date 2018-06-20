@@ -1,7 +1,6 @@
 package ServerTest.server;
 import java.io.*;
 import java.net.*;
-import java.security.spec.ECField;
 
 public class HTTPServer {
     public static void main(String args[]){
@@ -9,9 +8,9 @@ public class HTTPServer {
         ServerSocket serverSocket;
         try {
             port=Integer.parseInt(args[0]);
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (Exception e) {
             port = 8080;
-            e.printStackTrace();
+//            e.printStackTrace();
         }
 
         try {
@@ -42,7 +41,7 @@ public class HTTPServer {
         String firstLineOfRequest=request.substring(0,request.indexOf("\r\n"));
         String[] parts=firstLineOfRequest.split(" ");
         String uri=parts[1];
-
+        System.out.println("uri:"+uri);
         String contentType;
         if(uri.indexOf("html")!=-1||uri.indexOf("htm")!=-1){
             contentType = "text/html";
@@ -56,7 +55,9 @@ public class HTTPServer {
 
         String responseFirsrLine="HTTP/1.1 200 OK\r\n";
         String responseHeader="Content-Type:"+contentType+"\r\n\r\n";
-        InputStream in = HTTPServer.class.getResourceAsStream("root/"+uri);
+        File file=new File("E:\\code\\javaWeb\\JavaMaven\\src\\test\\java\\ServerTest\\server\\"+uri);
+        InputStream in=new FileInputStream(file) ;
+//        InputStream in = HTTPServer.class.getResourceAsStream(uri);
 
         OutputStream socketOut=socket.getOutputStream();
         socketOut.write(responseFirsrLine.getBytes());
@@ -64,9 +65,8 @@ public class HTTPServer {
         socketOut.write("想不到吧".getBytes());
         int len=0;
         buffer=new byte[128];
-        while ((len=in.read(buffer))!=-1){
+        while((len=in.read(buffer))!=-1)
             socketOut.write(buffer,0,len);
-        }
         Thread.sleep(1000);
         socket.close();
     }

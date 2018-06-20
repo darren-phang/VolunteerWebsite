@@ -7,7 +7,7 @@ import java.net.Socket;
 
 public class HTTPClient {
     public static void main(String args[]){
-        String uri="index.htm";
+        String uri="index.html";
         if(args.length!=0){
             uri=args[0];
         }
@@ -21,13 +21,14 @@ public class HTTPClient {
             e.printStackTrace();
         }
         try {
-            StringBuffer sb = new StringBuffer("GET"+uri+" HTTP/1.1\r\n");
+            StringBuffer sb = new StringBuffer("GET "+uri+" HTTP/1.1\r\n");
             sb.append("Accept: */*\r\n");
             sb.append("Accept-Language: zh-cn\r\n");
             sb.append("Accept-Encoding: gzip, deflate\r\n");
             sb.append("User-Agent: HTTPClient\r\n");
             sb.append("Host: localhost:8080\r\n");
             sb.append("Connection: Keep-Alive\r\n\r\n");
+
             OutputStream socketOut=socket.getOutputStream();
             socketOut.write(sb.toString().getBytes());
             Thread.sleep(2000);
