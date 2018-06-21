@@ -21,7 +21,7 @@
 //数据库信息
         String userName="root";
 //密码
-        String userPasswd="pwh19990228";
+        String userPasswd="cdut6a502";
 //数据库名
         String dbName="JavaWeb";
 //表名
