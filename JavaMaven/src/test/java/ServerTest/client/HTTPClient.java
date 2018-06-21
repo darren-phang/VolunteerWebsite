@@ -11,7 +11,7 @@ public class HTTPClient {
         if(args.length!=0){
             uri=args[0];
         }
-        doGet("localhost",8080,uri);
+        doGet("39.108.183.209",8080, uri);
     }
     public static void doGet(String host, int post, String uri){
         Socket socket=null;

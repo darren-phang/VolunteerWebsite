@@ -55,9 +55,9 @@ public class HTTPServer {
 
         String responseFirsrLine="HTTP/1.1 200 OK\r\n";
         String responseHeader="Content-Type:"+contentType+"\r\n\r\n";
-//        File file=new File("E:\\code\\javaWeb\\JavaMaven\\src\\test\\java\\ServerTest\\server\\"+uri);
-//        InputStream in=new FileInputStream(file) ;
-        InputStream in = HTTPServer.class.getResourceAsStream(uri);
+        File file=new File("E:\\code\\javaWeb\\JavaMaven\\src\\test\\java\\ServerTest\\server\\"+uri);
+        InputStream in=new FileInputStream(file) ;
+//        InputStream in = HTTPServer.class.getResourceAsStream(uri);
 
         OutputStream socketOut=socket.getOutputStream();
         socketOut.write(responseFirsrLine.getBytes());
