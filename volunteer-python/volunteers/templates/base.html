@@ -1,0 +1,111 @@
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{% static "css/base.css" %}" rel="stylesheet" type="text/css"/>
+
+    <title>志愿者服务活动中心</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+            </button>
+            <a class="navbar-brand" href="{% url 'blogs:index' %}" style="font-size: 25px;">
+                志愿者服务活动中心</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav dropdown-hover">
+                <!-- <li><a href="{% url 'volunteers:topics' %}">Topics</a></li>-->
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" >文明XX
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">热门</a></li>
+                            <li><a href="#">最新</a></li>
+                        </ul>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" >XX志愿者APP
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">项目介绍</a></li>
+                            <li><a href="#">新闻专栏</a></li>
+                            <li><a href="#">志愿招募</a></li>
+                            <li><a href="#">活动地图</a></li>
+                        </ul>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" >XX志愿者网
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">项目介绍</a></li>
+                            <li><a href="#">新闻专栏</a></li>
+                            <li><a href="#">宣传视频</a></li>
+                            <li><a href="#">专题活动</a></li>
+                        </ul>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" >雷锋热线
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">项目介绍</a></li>
+                            <li><a href="#">新闻专栏</a></li>
+                            <li><a href="#">我要求助</a></li>
+                            <li><a href="#">我要帮扶</a></li>
+                            <li><a href="#">品牌活动</a></li>
+                            <li><a href="#">宣传视频</a></li>
+                        </ul>
+                    </a>
+                </li>
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" >公益活动
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">让轮椅飞</a></li>
+                            <li><a href="#">名师一堂课</a></li>
+                            <li><a href="#">睡前讲故事</a></li>
+                        </ul>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">公益广告
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">图说我们的价值观</a></li>
+                            <li><a href="#">“讲文明 树新风”公益广告</a></li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            {% block header %}{% endblock header %}
+        </div>
+        <div>
+            {% block content %}{% endblock content %}
+        </div>
+    </div> <!-- /container -->
+</nav>
+</body>
+</html>
