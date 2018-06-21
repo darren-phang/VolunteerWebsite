@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="46d75b83-e55f-4667-9da7-cd5e059d5329" name="blog" url="http://www.strivexj.com">
+        <fileTransfer host="www.strivexj.com" port="22" rootFolder="/home/wwwroot/www.strivexj.com" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
