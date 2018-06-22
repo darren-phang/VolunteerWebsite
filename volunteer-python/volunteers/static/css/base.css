@@ -1,0 +1,10 @@
+.dropdown-hover .dropdown-menu li:hover .submenu {
+    visibility: visible;
+}
+.dropdown-hover .dropdown:hover .dropdown-menu {
+    display: block
+}
+
+li, ul {
+    font-size: 20px;
+}
