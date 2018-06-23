@@ -62,6 +62,9 @@
     stmt.close();
     conn.close();
 %>
+<div>
+
+</div>
 <header>
     <nav>
         <div class="container">
@@ -70,7 +73,7 @@
                 <ul>
                     <li><a href="index.jsp" class="current">文明你我</a></li>
                     <li><a href="index-1.html">志愿者APP</a></li>
-                    <li><a href="index-2.html">志愿者网</a></li>
+                    <li><a href="index-2.jsp">志愿者网</a></li>
                     <li><a href="index-3.html">雷锋热线</a></li>
                     <li><a href="index-3.html">公益活动</a></li>
                     <li><a href="index-3.html">公益广告</a></li>
@@ -116,43 +119,35 @@
                             自愿参与社会公益活动的人。享受乘坐公交车，地铁免费，免费进公园及旅游景点。
                             志愿者也叫义工、义务工作者或志工。他们致力于免费、无偿地为社会进步贡献自己的力量。
                             志愿工作是指一种具有组织性的助人及基于社会公益责任的参与行为，其发展可追溯至第二次世界大战后，福利主义抬头导致各国政府支出崩塌，发展义务工作以解决社会上不胜负荷的需求。</p>
-                        <a href="#" class="extra-button">更多</a>
+                        <a href="http://www.zgzyz.org.cn/" class="extra-button">更多</a>
                     </div>
                 </section>
             </div>
         </div>
     </div>
-    <div class="middle">
+    <div class="middle" style="height: 500px;">
         <div class="container">
             <div class="wrapper">
                 <div class="grid3 first">
                     <ul class="categories">
-                        <li><a href="#" name="one"
-                               onclick, onmouseenter="changeContent(0)"><%=lagetitle[0]%>
+                        <li><a href="#" onmouseenter="changeContent(0)"><%=lagetitle[0]%>
                         </a></li>
-                        <li><a href="#" name="tow"
-                               onmouseenter="changeContent(1)"><%=lagetitle[1]%>
+                        <li><a href="#" onmouseenter="changeContent(1)"><%=lagetitle[1]%>
                         </a></li>
-                        <li><a href="#" name="three"
-                               onmouseenter="changeContent(2)"><%=lagetitle[2]%>
+                        <li><a href="#" onmouseenter="changeContent(2)"><%=lagetitle[2]%>
                         </a></li>
-                        <li><a href="#" name="four"
-                               onmouseenter="changeContent(3)"><%=lagetitle[3]%>
+                        <li><a href="#" onmouseenter="changeContent(3)"><%=lagetitle[3]%>
                         </a></li>
-                        <li><a href="#" name="five"
-                               onmouseenter="changeContent(4)"><%=lagetitle[4]%>
+                        <li><a href="#" onmouseenter="changeContent(4)"><%=lagetitle[4]%>
                         </a></li>
                         <li><a href="#" name="six"
                                onmouseenter="changeContent(5)"><%=lagetitle[5]%>
                         </a></li>
-                        <li><a href="#" name="seven"
-                               onmouseenter="changeContent(6)"><%=lagetitle[6]%>
+                        <li><a href="#" onmouseenter="changeContent(6)"><%=lagetitle[6]%>
                         </a></li>
-                        <li><a href="#" name="eight"
-                               onmouseenter="changeContent(7)"><%=lagetitle[7]%>
+                        <li><a href="#" onmouseenter="changeContent(7)"><%=lagetitle[7]%>
                         </a></li>
-                        <li><a href="#" name="nine"
-                               onmouseenter="changeContent(8)"><%=lagetitle[8]%>
+                        <li><a href="#" onmouseenter="changeContent(8)"><%=lagetitle[8]%>
                         </a></li>
                     </ul>
                 </div>
@@ -165,15 +160,12 @@
                     <p><a id="newsurl" href=<%=readmore[showindex]%>>了解更多</a></p>
 
                     <section class="images">
-                        <figure style="height: 200px; width: 200px  ;"><a href="#"><img
-                                class="center-cropped" id="img1"
-                                src=<%=imageUrl[0]%> alt=""></a></figure>
-                        <figure style="height: 200px; width: 200px  ;"><a href="#"><img
-                                class="center-cropped" id="img2"
-                                src=<%=imageUrl[1]%> alt=""></a></figure>
-                        <figure style="height: 200px; width: 200px  ;"><a href="#"><img
-                                class="center-cropped" id="img3"
-                                src=<%=imageUrl[2]%>  alt=""></a></figure>
+                        <figure id="figure1" style="height: 200px; width: 200px  ;"><a><img
+                                class="center-cropped" id="img1" alt=""></a></figure>
+                        <figure id="figure2" style="height: 200px; width: 200px  ;"><a><img
+                                class="center-cropped" id="img2" alt=""></a></figure>
+                        <figure id="figure3" style="height: 200px; width: 200px  ;"><a><img
+                                class="center-cropped" id="img3" alt=""></a></figure>
                     </section>
                 </div>
             </div>
@@ -181,7 +173,7 @@
     </div>
 
 </section>
-<%@ include file="footer.jsp" %>
+
 
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
@@ -192,49 +184,55 @@
     var title = new Array();
     var url = new Array();
     var imgurl = new Array();
-
     <% for(int j=0;j <body.length;j++){ %>
     body[<%=j%>] = " <%=body[j]%> ";
     title[<%=j%>] = " <%=titlemore[j]%> ";
     url[<%=j%>] = " <%=readmore[j]%> ";
     imgurl[<%=j%>] = " <%=imageUrl[j]%> ";
     <% } %>
-
+    function addImg(index){
+        var imgurls = new Array();
+        imgurls[0] = imgurl[index].split(";")[0];
+        imgurls[1] = imgurl[index].split(";")[1];
+        imgurls[2] = imgurl[index].split(";")[2];
+        var i=0;
+        for (; i < 3; ++i) {
+            var str = "img" + (i + 1);
+            var figure = "figure" + (i + 1);
+            document.getElementById(figure).style.display="none";
+            if(imgurls[i]!=" null "&&imgurls[i]!=undefined){
+                document.getElementById(figure).style.display="";
+                document.getElementById(str).src = imgurls[i].trim();
+            }
+        }
+    }
     function changeContent(index) {
         newstitle.innerText = title[index];
         newscontent.innerText = body[index];
         newsurl.href = url[index];
-        var imgurls = imgurl[index].split(";");
+        addImg(index);
+       /* var imgurls = imgurl[index].split(";");
         for (var i = 0; i < imgurls.length; i++) {
             var str = "img" + (i + 1);
             document.getElementById(str).src = imgurls[i];
-            /* var div2=document.createElement("div");
+            /!* var div2=document.createElement("div");
              div2.innerHTML="aaaaa"
-             document.getElementById("images").appendChild(div2);*/
+             document.getElementById("images").appendChild(div2);*!/
 
-            /* console.log(imgurls[i]);
+            /!* console.log(imgurls[i]);
              var div = document.createElement("figure");
              div.innerHTML = "<a href=\"#\"><img class=\"center-cropped\" src=\"" + imgurls[i] + "\"></a>";
-             document.getElementsByClassName("images").appendChild(div);*/
-        }
+             document.getElementsByClassName("images").appendChild(div);*!/
+        }*/
 
 
     }
 
 </script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('.pics').cycle({
-            fx: 'toss',
-            next: '#next',
-            prev: '#prev'
-        });
-        // Datepicker
-        $('#datepicker').datepicker({
-            inline: true
-        });
-    });
+    window.onload=changeContent(0);
 </script>
+<%@ include file="footer.jsp" %>
 
 </body>
 </html>

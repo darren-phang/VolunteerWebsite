@@ -20,8 +20,6 @@
     <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
     <script type="text/javascript" src="js/html5.js"></script>
-
-
 </head>
 
 <body>
@@ -37,6 +35,9 @@
 //表名
     String tableName1 = "Index2intor";
     String tableName2 = "Index2news";
+    String tableName3 = "Index2activity";
+    String url = "jdbc:mysql://39.108.183.209/" + dbName + "?user=" + userName + "&password=" + userPasswd;
+    Class.forName("com.mysql.jdbc.Driver").newInstance();
 %>
 <%
     String[] hrefs = new String[15];
@@ -47,9 +48,7 @@
     }
 %>
 <%
-    String url1 = "jdbc:mysql://39.108.183.209/" + dbName + "?user=" + userName + "&password=" + userPasswd;
-    Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection(url1);
+    Connection conn = DriverManager.getConnection(url);
     Statement stmt = conn.createStatement();
     String sql = "SELECT * FROM " + tableName2;
     ResultSet rs = stmt.executeQuery(sql);
@@ -72,11 +71,12 @@
     String body1 = "";
     String body2 = "";
     String importnew = "";
+    String video = "";
+    String width = "600";
+    String height = "600";
 %>
 <%
-    String url2 = "jdbc:mysql://39.108.183.209/" + dbName + "?user=" + userName + "&password=" + userPasswd;
-    Class.forName("com.mysql.jdbc.Driver").newInstance();
-    conn = DriverManager.getConnection(url2);
+    conn = DriverManager.getConnection(url);
     stmt = conn.createStatement();
     sql = "SELECT * FROM " + tableName1;
     rs = stmt.executeQuery(sql);
@@ -89,6 +89,35 @@
         imageUrl2 = rs.getString(4);
         body1 = rs.getString(5);
         body2 = rs.getString(6);
+        importnew = rs.getString(7);
+        video = rs.getString(8);
+        width = rs.getString(9);
+        height = rs.getString(10);
+        i += 1;
+    }
+    rs.close();
+    stmt.close();
+    conn.close();
+%>
+<%
+    String[] hrefs_activity = new String[5];
+    String[] titles_activity = new String[5];
+    for(i=0;i<5;i++){
+        hrefs_activity[i]="";
+        titles_activity[i]="";
+    }
+%>
+<%
+    conn = DriverManager.getConnection(url);
+    stmt = conn.createStatement();
+    sql = "SELECT * FROM " + tableName3;
+    rs = stmt.executeQuery(sql);
+    i = 0;
+    while (rs.next()) {
+        if (i > 4)
+            break;
+        titles_activity[i] = rs.getString(2);
+        hrefs_activity[i] = rs.getString(3);
         i += 1;
     }
     rs.close();
@@ -139,12 +168,22 @@
                         <figure><img src="<%=imageUrl2%>" alt="" width="250" height="150"></figure>
                         <p style="word-wrap: break-word; font-size: large; line-height: 30px"><%=body2%></p>
                     </div>
-                    <a href="<%=readmore%>>" class="more">了解更多</a>
+                    <a href="<%=readmore%>" class="more" target="_blank">了解更多</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="middle">
+        <div class="container">
+            <div class="clearfix">
+                <div class="grid9">
+                    <embed src="<%=video%>" width="<%=width%>" height="<%=height%>">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="top">
         <div class="container">
             <div class="clearfix">
                 <div class="grid3 first">
@@ -153,7 +192,7 @@
                         <figure><img src="images/2page-img3.jpg" alt=""></figure>
                     </div>
                     <p style="word-wrap: break-word">欢迎来到志愿者网的新闻专栏，我们讲会
-                    第一时间为你们送上全球各地的新闻。</p>
+                        第一时间为你们送上全球各地的新闻。</p>
                 </div>
                 <div class="grid9">
                     <h2>热点新闻</h2>
@@ -161,91 +200,60 @@
                     <div class="clearfix">
                         <div class="grid3 first">
                             <ul class="list3">
-                                <li><a href="<%=hrefs[0]%>"><%=titles[0]%></a></li>
-                                <li><a href="<%=hrefs[1]%>"><%=titles[1]%></a></li>
-                                <li><a href="<%=hrefs[2]%>"><%=titles[2]%></a></li>
-                                <li><a href="<%=hrefs[3]%>"><%=titles[3]%></a></li>
-                                <li><a href="<%=hrefs[4]%>"><%=titles[4]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[0]%>"><%=titles[0]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[1]%>"><%=titles[1]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[2]%>"><%=titles[2]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[3]%>"><%=titles[3]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[4]%>"><%=titles[4]%></a></li>
                             </ul>
                         </div>
                         <div class="grid3">
                             <ul class="list3">
-                                <li><a href="<%=hrefs[5]%>"><%=titles[5]%></a></li>
-                                <li><a href="<%=hrefs[6]%>"><%=titles[6]%></a></li>
-                                <li><a href="<%=hrefs[7]%>"><%=titles[7]%></a></li>
-                                <li><a href="<%=hrefs[8]%>"><%=titles[8]%></a></li>
-                                <li><a href="<%=hrefs[9]%>"><%=titles[9]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[5]%>"><%=titles[5]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[6]%>"><%=titles[6]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[7]%>"><%=titles[7]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[8]%>"><%=titles[8]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[9]%>"><%=titles[9]%></a></li>
                             </ul>
                         </div>
                         <div class="grid3">
                             <ul class="list3">
-                                <li><a href="<%=hrefs[10]%>"><%=titles[10]%></a></li>
-                                <li><a href="<%=hrefs[11]%>"><%=titles[11]%></a></li>
-                                <li><a href="<%=hrefs[12]%>"><%=titles[12]%></a></li>
-                                <li><a href="<%=hrefs[13]%>"><%=titles[13]%></a></li>
-                                <li><a href="<%=hrefs[14]%>"><%=titles[14]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[10]%>"><%=titles[10]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[11]%>"><%=titles[11]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[12]%>"><%=titles[12]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[13]%>"><%=titles[13]%></a></li>
+                                <li><a target="_blank" href="<%=hrefs[14]%>"><%=titles[14]%></a></li>
                             </ul>
                         </div>
                     </div>
-                    <a href="http://zqb.cyol.com/html/2017-08/11/nbs.D110000zgqnb_01.htm" class="more">了解更多</a>
+                    <a target="_blank" href="http://zqb.cyol.com/html/2017-08/11/nbs.D110000zgqnb_01.htm" class="more">了解更多</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bottom">
+    <div class="middle">
         <div class="container">
-            <div class="wrapper">
-                <div class="grid3 first">
-                    <h3>相关信息</h3>
-                    <ul class="list1">
-                        <li><a href="#">Real Application Clusters</a></li>
-                        <li><a href="#">Database Security</a></li>
-                        <li><a href="#">Secure Enterprise Search</a></li>
-                    </ul>
-                </div>
-                <div class="grid3">
-                    <h3>Quick Links</h3>
-                    <ul class="list2">
-                        <li><a href="#">Certification</a></li>
-                        <li><a href="#">Education</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">For Midsize Companies</a></li>
-                        <li><a href="#">Investors</a></li>
-                        <li><a href="#">Technology Network</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="grid3">
-                    <h3>Top Downloads</h3>
-                    <ul class="list2">
-                        <li><a href="#">Enterprise Architecture</a></li>
-                        <li><a href="#">Enterprise 2.0</a></li>
-                        <li><a href="#">Grid</a></li>
-                        <li><a href="#">Service-Oriented Architecture</a></li>
-                        <li><a href="#">Virtualization</a></li>
-                        <li><a href="#">Database XE</a></li>
-                        <li><a href="#">Enterprise Management</a></li>
-                    </ul>
-                </div>
-                <!--日历-->
-                <div class="grid3">
-                    <div id="datepicker"></div>
+            <div class="clearfix">
+                <div class="grid9">
+                    <h2>专题活动</h2>
+                    <div class="clearfix">
+                        <div class="grid9 first">
+                            <ul class="list3" style="line-height: 35px;">
+                                <li><a style="font-size: xx-large" target="_blank" href="<%=hrefs_activity[0]%>"><%=titles_activity[0]%></a></li>
+                                <li><a style="font-size: xx-large" target="_blank" href="<%=hrefs_activity[1]%>"><%=titles_activity[1]%></a></li>
+                                <li><a style="font-size: xx-large" target="_blank" href="<%=hrefs_activity[2]%>"><%=titles_activity[2]%></a></li>
+                                <li><a style="font-size: xx-large" target="_blank" href="<%=hrefs_activity[3]%>"><%=titles_activity[3]%></a></li>
+                                <li><a style="font-size: xx-large" target="_blank" href="<%=hrefs_activity[4]%>"><%=titles_activity[4]%></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="http://www.hnvs.cn/!" target="_blank" class="more">了解更多</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<footer>
-    <div class="container">
-        <div class="wrapper">
-            <div class="copy">Industrial Services (c) 2018 | <a href="index-4.html">Privacy
-                policy</a></div>
-            <address class="phone">
-                如果想要质询更多.请拨打我们的电话 <strong>0-123-456-789</strong>
-            </address>
-        </div>
-    </div>
-</footer>
+<%@ include file="footer.jsp" %>
 </body>
 
 </html>

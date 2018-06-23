@@ -10,7 +10,7 @@
 <footer>
     <div class="bottom">
         <div class="container">
-            <div class="wrapper" align="middle">
+            <div class="wrapper">
                 <div class="grid3 first">
                     <h3>团队成员</h3>
                     <ul class="list1">
@@ -31,8 +31,21 @@
     </div>
     <div class="container">
         <div class="wrapper">
-            <div class="copy">&copyCUDT实训 2018 | <a href="index-4.html">Privacy
+            <div class="copy">&copyCDUT实训 2018 | <a href="index-4.html">Privacy
                 policy</a></div>
         </div>
     </div>
 </footer>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.pics').cycle({
+            fx: 'toss',
+            next: '#next',
+            prev: '#prev'
+        });
+        // Datepicker
+        $('#datepicker').datepicker({
+            inline: true
+        });
+    });
+</script>
