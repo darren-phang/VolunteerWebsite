@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.mysql.jdbc.Driver" %>
 <%@ page import="java.sql.*" %>
 <html lang="en">
 <head>
@@ -16,30 +15,7 @@
     <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/jquery-ui-1.8.5.custom.css" type="text/css" media="all">
-    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
-    <script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
-    <script type="text/javascript" src="js/html5.js"></script>
-    <script language="JavaScript" type="text/javascript">
-        var body = new Array();
-        var title = new Array();
-        var url = new Array();
 
-        <% for(int i=0;i <body.length;i++){ %>
-
-        body[<%=i%>] = " <%=body[i]%> ";
-        title[<%=i%>] = " <%=titlemore[i]%> ";
-        url[<%=i%>] = " <%=readmore[i]%> ";
-
-        <% } %>
-
-
-        function changeContent(index) {
-            newstitle.innerText = title[index];
-            newscontent.innerText = body[index];
-            newsurl.href=url[index];
-        }
-    </script>
 </head>
 
 <body>
@@ -49,15 +25,7 @@
     String[] lagetitle = new String[9];
     String[] titlemore = new String[9];
     String[] imageUrl = new String[9];
-    String[] body = new String[9];%>
-<%
-    for (int i = 0; i < 9; i++) {
-        readmore[i] = "";
-        lagetitle[i] = "";
-        titlemore[i] = "";
-        imageUrl[i] = "";
-        body[i] = "";
-    }
+    String[] body = new String[9];
 %>
 <%
     //加载驱动程序
@@ -85,6 +53,8 @@
         lagetitle[i] = rs.getString(3);
         titlemore[i] = rs.getString(4);
         imageUrl[i] = rs.getString(5);
+
+        System.out.println(imageUrl[i]);
         body[i] = rs.getString(6);
         i += 1;
     }
@@ -96,11 +66,11 @@
     <nav>
         <div class="container">
             <div class="wrapper">
-                <h1><a href="index.html"><strong>志愿者</strong>服务</a></h1>
+                <h1><a href="index.jsp"><strong>志愿者</strong>服务</a></h1>
                 <ul>
                     <li><a href="index.jsp" class="current">文明你我</a></li>
                     <li><a href="index-1.html">志愿者APP</a></li>
-                    <li><a href="index-2.jsp">志愿者网</a></li>
+                    <li><a href="index-2.html">志愿者网</a></li>
                     <li><a href="index-3.html">雷锋热线</a></li>
                     <li><a href="index-3.html">公益活动</a></li>
                     <li><a href="index-3.html">公益广告</a></li>
@@ -111,7 +81,7 @@
     <section class="adv-content">
         <div class="container">
             <ul class="breadcrumbs">
-                <li>咨询</li>
+                <li>首页</li>
             </ul>
             <form action="" id="search-form">
                 <fieldset>
@@ -139,10 +109,14 @@
                 <!--图片右边那一块-->
                 <section id="intro">
                     <div class="inner">
-                        <h2>网站介绍<br/> 网站介绍<span>网站介绍</span></h2>
-                        <p>网站介绍<br/> 网站介绍
-                            网站介绍 </p>
-                        <a href="#" class="extra-button">了解更多</a>
+                        <h2>志愿者活动中心</h2>
+                        <p style="font-size: 18px">
+                            志愿者（Volunteer）联合国定义为“自愿进行社会公共利益服务而不获取任何利益、金钱、名利的活动者”，具体指在不为任何物质报酬的情况下，能够主动承担社会责任而不获取报酬，奉献个人时间和行动的人。
+                            根据中国的具体情况来说，志愿者是这样定义的：“在自身条件许可的情况下，参加相关团体，在不谋求任何物质、金钱及相关利益回报的前提下，在非本职职责范围内，合理运用社会现有的资源，服务于社会公益事业，为帮助有一定需要的人士，开展力所能及的、切合实际的，具一定专业性、技能性、长期性服务活动的人。"
+                            自愿参与社会公益活动的人。享受乘坐公交车，地铁免费，免费进公园及旅游景点。
+                            志愿者也叫义工、义务工作者或志工。他们致力于免费、无偿地为社会进步贡献自己的力量。
+                            志愿工作是指一种具有组织性的助人及基于社会公益责任的参与行为，其发展可追溯至第二次世界大战后，福利主义抬头导致各国政府支出崩塌，发展义务工作以解决社会上不胜负荷的需求。</p>
+                        <a href="#" class="extra-button">更多</a>
                     </div>
                 </section>
             </div>
@@ -153,95 +127,101 @@
             <div class="wrapper">
                 <div class="grid3 first">
                     <ul class="categories">
-                        <li><a href="#" onmouseenter="changeContent(0)" target="_blank"><%=lagetitle[0]%>
+                        <li><a href="#" name="one"
+                               onclick, onmouseenter="changeContent(0)"><%=lagetitle[0]%>
                         </a></li>
-                        <li><a href="#" onmouseenter="changeContent(1)" target="_blank"><%=lagetitle[1]%>
+                        <li><a href="#" name="tow"
+                               onmouseenter="changeContent(1)"><%=lagetitle[1]%>
                         </a></li>
-                        <li><a href="#" onmouseenter="changeContent(2)"><%=lagetitle[2]%>
+                        <li><a href="#" name="three"
+                               onmouseenter="changeContent(2)"><%=lagetitle[2]%>
                         </a></li>
-                        <li><a href="#" onmouseenter="changeContent(3)"><%=lagetitle[3]%>
+                        <li><a href="#" name="four"
+                               onmouseenter="changeContent(3)"><%=lagetitle[3]%>
                         </a></li>
-                        <li><a href="#" onmouseenter="changeContent(4)"><%=lagetitle[4]%>
+                        <li><a href="#" name="five"
+                               onmouseenter="changeContent(4)"><%=lagetitle[4]%>
                         </a></li>
-                        <li><a href="#" onmouseenter="changeContent(5)"><%=lagetitle[5]%>
+                        <li><a href="#" name="six"
+                               onmouseenter="changeContent(5)"><%=lagetitle[5]%>
                         </a></li>
-                        <li><a href="#" onmouseenter="changeContent(6)"><%=lagetitle[6]%>
+                        <li><a href="#" name="seven"
+                               onmouseenter="changeContent(6)"><%=lagetitle[6]%>
                         </a></li>
-                        <li><a href="#" onmouseenter="changeContent(7)"><%=lagetitle[7]%>
+                        <li><a href="#" name="eight"
+                               onmouseenter="changeContent(7)"><%=lagetitle[7]%>
                         </a></li>
-                        <li><a href="#" onmouseenter="changeContent(8)"><%=lagetitle[8]%>
+                        <li><a href="#" name="nine"
+                               onmouseenter="changeContent(8)"><%=lagetitle[8]%>
                         </a></li>
                     </ul>
                 </div>
                 <div class="grid9">
-                    <h2 id="newstitle" style="padding-top: 10px;line-height: 40px"><%=titlemore[showindex]%>
+                    <h2 id="newstitle"
+                        style="padding-top: 10px;line-height: 40px"><%=titlemore[showindex]%>
                     </h2>
                     <p id="newscontent"><%=body[showindex]%>
                     </p>
-                    <p ><a id="newsurl" href=<%=readmore[showindex]%>>了解更多</a></p>
+                    <p><a id="newsurl" href=<%=readmore[showindex]%>>了解更多</a></p>
+
                     <section class="images">
-                        <figure><a href="#"><img src=<%=imageUrl[showindex]%> alt=""></a></figure>
-                        <figure><a href="#"><img src="images/1page-img2.jpg" alt=""></a></figure>
-                        <figure><a href="#"><img src="images/1page-img3.jpg" alt=""></a></figure>
+                        <figure style="height: 200px; width: 200px  ;"><a href="#"><img
+                                class="center-cropped" id="img1"
+                                src=<%=imageUrl[0]%> alt=""></a></figure>
+                        <figure style="height: 200px; width: 200px  ;"><a href="#"><img
+                                class="center-cropped" id="img2"
+                                src=<%=imageUrl[1]%> alt=""></a></figure>
+                        <figure style="height: 200px; width: 200px  ;"><a href="#"><img
+                                class="center-cropped" id="img3"
+                                src=<%=imageUrl[2]%>  alt=""></a></figure>
                     </section>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bottom">
-        <div class="container">
-            <div class="wrapper">
-                <div class="grid3 first">
-                    <h3>相关信息</h3>
-                    <ul class="list1">
-                        <li><a href="#">Real Application Clusters</a></li>
-                        <li><a href="#">Database Security</a></li>
-                        <li><a href="#">Secure Enterprise Search</a></li>
-                    </ul>
-                </div>
-                <div class="grid3">
-                    <h3>Quick Links</h3>
-                    <ul class="list2">
-                        <li><a href="#">Certification</a></li>
-                        <li><a href="#">Education</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">For Midsize Companies</a></li>
-                        <li><a href="#">Investors</a></li>
-                        <li><a href="#">Technology Network</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="grid3">
-                    <h3>Top Downloads</h3>
-                    <ul class="list2">
-                        <li><a href="#">Enterprise Architecture</a></li>
-                        <li><a href="#">Enterprise 2.0</a></li>
-                        <li><a href="#">Grid</a></li>
-                        <li><a href="#">Service-Oriented Architecture</a></li>
-                        <li><a href="#">Virtualization</a></li>
-                        <li><a href="#">Database XE</a></li>
-                        <li><a href="#">Enterprise Management</a></li>
-                    </ul>
-                </div>
-                <!--日历-->
-                <div class="grid3">
-                    <div id="datepicker"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </section>
-<footer>
-    <div class="container">
-        <div class="wrapper">
-            <div class="copy">Industrial Services (c) 2018 | <a href="index-4.html">Privacy
-                policy</a></div>
-            <address class="phone">
-                如果想要质询更多.请拨打我们的电话 <strong>0-123-456-789</strong>
-            </address>
-        </div>
-    </div>
-</footer>
+<%@ include file="footer.jsp" %>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
+<script type="text/javascript" src="js/html5.js"></script>
+<script type="text/javascript">
+    var body = new Array();
+    var title = new Array();
+    var url = new Array();
+    var imgurl = new Array();
+
+    <% for(int j=0;j <body.length;j++){ %>
+    body[<%=j%>] = " <%=body[j]%> ";
+    title[<%=j%>] = " <%=titlemore[j]%> ";
+    url[<%=j%>] = " <%=readmore[j]%> ";
+    imgurl[<%=j%>] = " <%=imageUrl[j]%> ";
+    <% } %>
+
+    function changeContent(index) {
+        newstitle.innerText = title[index];
+        newscontent.innerText = body[index];
+        newsurl.href = url[index];
+        var imgurls = imgurl[index].split(";");
+        for (var i = 0; i < imgurls.length; i++) {
+            var str = "img" + (i + 1);
+            document.getElementById(str).src = imgurls[i];
+            /* var div2=document.createElement("div");
+             div2.innerHTML="aaaaa"
+             document.getElementById("images").appendChild(div2);*/
+
+            /* console.log(imgurls[i]);
+             var div = document.createElement("figure");
+             div.innerHTML = "<a href=\"#\"><img class=\"center-cropped\" src=\"" + imgurls[i] + "\"></a>";
+             document.getElementsByClassName("images").appendChild(div);*/
+        }
+
+
+    }
+
+</script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('.pics').cycle({
