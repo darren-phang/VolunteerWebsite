@@ -20,7 +20,6 @@
     <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
     <script type="text/javascript" src="js/html5.js"></script>
-
     <script language="JavaScript" type="text/javascript">
         var body = new Array();
         var title = new Array();
@@ -41,7 +40,6 @@
             newsurl.href=url[index];
         }
     </script>
-
 </head>
 
 <body>
@@ -100,9 +98,9 @@
             <div class="wrapper">
                 <h1><a href="index.html"><strong>志愿者</strong>服务</a></h1>
                 <ul>
-                    <li><a href="index.html" class="current">文明你我</a></li>
+                    <li><a href="index.jsp" class="current">文明你我</a></li>
                     <li><a href="index-1.html">志愿者APP</a></li>
-                    <li><a href="index-2.html">志愿者网</a></li>
+                    <li><a href="index-2.jsp">志愿者网</a></li>
                     <li><a href="index-3.html">雷锋热线</a></li>
                     <li><a href="index-3.html">公益活动</a></li>
                     <li><a href="index-3.html">公益广告</a></li>
@@ -155,37 +153,28 @@
             <div class="wrapper">
                 <div class="grid3 first">
                     <ul class="categories">
-                        <li><a href="#" name="one"
-                               onclick, onmouseenter="changeContent(0)"><%=lagetitle[0]%>
+                        <li><a href="#" onmouseenter="changeContent(0)" target="_blank"><%=lagetitle[0]%>
                         </a></li>
-                        <li><a href="#" name="tow"
-                               onmouseenter="changeContent(1)"><%=lagetitle[1]%>
+                        <li><a href="#" onmouseenter="changeContent(1)" target="_blank"><%=lagetitle[1]%>
                         </a></li>
-                        <li><a href="#" name="three"
-                               onmouseenter="changeContent(2)"><%=lagetitle[2]%>
+                        <li><a href="#" onmouseenter="changeContent(2)"><%=lagetitle[2]%>
                         </a></li>
-                        <li><a href="#" name="four"
-                               onmouseenter="changeContent(3)"><%=lagetitle[3]%>
+                        <li><a href="#" onmouseenter="changeContent(3)"><%=lagetitle[3]%>
                         </a></li>
-                        <li><a href="#" name="five"
-                               onmouseenter="changeContent(4)"><%=lagetitle[4]%>
+                        <li><a href="#" onmouseenter="changeContent(4)"><%=lagetitle[4]%>
                         </a></li>
-                        <li><a href="#" name="six"
-                               onmouseenter="changeContent(5)"><%=lagetitle[5]%>
+                        <li><a href="#" onmouseenter="changeContent(5)"><%=lagetitle[5]%>
                         </a></li>
-                        <li><a href="#" name="seven"
-                               onmouseenter="changeContent(6)"><%=lagetitle[6]%>
+                        <li><a href="#" onmouseenter="changeContent(6)"><%=lagetitle[6]%>
                         </a></li>
-                        <li><a href="#" name="eight"
-                               onmouseenter="changeContent(7)"><%=lagetitle[7]%>
+                        <li><a href="#" onmouseenter="changeContent(7)"><%=lagetitle[7]%>
                         </a></li>
-                        <li><a href="#" name="nine"
-                               onmouseenter="changeContent(8)"><%=lagetitle[8]%>
+                        <li><a href="#" onmouseenter="changeContent(8)"><%=lagetitle[8]%>
                         </a></li>
                     </ul>
                 </div>
                 <div class="grid9">
-                    <h2 id="newstitle"><%=titlemore[showindex]%>
+                    <h2 id="newstitle" style="padding-top: 10px;line-height: 40px"><%=titlemore[showindex]%>
                     </h2>
                     <p id="newscontent"><%=body[showindex]%>
                     </p>
@@ -266,5 +255,6 @@
         });
     });
 </script>
+
 </body>
 </html>

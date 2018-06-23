@@ -17,11 +17,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="27" />
+            <state relative-caret-position="219">
+              <caret line="190" column="4" selection-start-line="190" selection-start-column="4" selection-end-line="231" selection-end-column="10" />
+              <folding>
+                <element signature="n#script#4;n#head#0;n#html#0;n#!!top" />
+                <element signature="e#1549#1770#0#JSP" />
+                <element signature="e#1771#1944#0#JSP" />
+                <element signature="e#1945#2922#0#JSP" />
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index-2.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/index-2.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="151" column="23" lean-forward="true" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
+              <folding>
+                <element signature="n#!!doc;n#jsp:root#0;n#!!top" />
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="e#987#997#0#JSP" />
+                <element signature="e#987#997#0#JSP" />
+                <element signature="e#1068#1078#0#JSP" />
+                <element signature="e#1119#2081#0#JSP" />
+                <element signature="e#0#23#1" />
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#form#0;n#div#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#fieldset#0;n#form#0;n#div#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grid.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/grid.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index-2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index-2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="85" column="31" lean-forward="true" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#1;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#2;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index-1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index-1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="64" column="16" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="64" selection-end-column="16" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,6 +166,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>prev</find>
+      <find>grid9</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -86,7 +176,10 @@
         <option value="$PROJECT_DIR$/web/js/jquery-ui-1.8.5.custom.min.js" />
         <option value="$PROJECT_DIR$/web/databasetest.jsp" />
         <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/index-2.html" />
+        <option value="$PROJECT_DIR$/web/css/grid.css" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/index-2.jsp" />
       </list>
     </option>
   </component>
@@ -149,6 +242,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\学习文件\第一次实训\javaWeb\website\web" />
       <recent name="$PROJECT_DIR$/web/images" />
       <recent name="E:\code\javaWeb\website\web\WEB-INF\lib" />
       <recent name="E:\code\javaWeb\website\web" />
@@ -805,12 +899,12 @@
       <workItem from="1529720967377" duration="50000" />
       <workItem from="1529721084552" duration="3621000" />
       <workItem from="1529727278864" duration="2335000" />
-      <workItem from="1529736330194" duration="243000" />
+      <workItem from="1529736330194" duration="4561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15546000" />
+    <option name="totallyTimeSpent" value="19864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -857,7 +951,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -865,6 +959,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2442">
           <caret line="66" column="7" lean-forward="true" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+          <folding>
+            <element signature="n#script#4;n#head#0;n#html#0;n#!!top" />
+            <element signature="e#1549#1770#0#JSP" />
+            <element signature="e#1771#1944#0#JSP" />
+            <element signature="e#1945#2922#0#JSP" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1048,9 +1155,6 @@
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/grid.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/structural.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -1121,10 +1225,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/index-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="85" column="31" lean-forward="true" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="64" column="16" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="64" selection-end-column="16" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#2;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/grid.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="27" />
+        <state relative-caret-position="219">
+          <caret line="190" column="4" selection-start-line="190" selection-start-column="4" selection-end-line="231" selection-end-column="10" />
+          <folding>
+            <element signature="n#script#4;n#head#0;n#html#0;n#!!top" />
+            <element signature="e#1549#1770#0#JSP" />
+            <element signature="e#1771#1944#0#JSP" />
+            <element signature="e#1945#2922#0#JSP" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index-2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="151" column="23" lean-forward="true" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc;n#jsp:root#0;n#!!top" />
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="e#987#997#0#JSP" />
+            <element signature="e#987#997#0#JSP" />
+            <element signature="e#1068#1078#0#JSP" />
+            <element signature="e#1119#2081#0#JSP" />
+            <element signature="e#0#23#1" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#form#0;n#div#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#fieldset#0;n#form#0;n#div#0;n#section#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
