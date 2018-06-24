@@ -49,41 +49,6 @@
     stmt.close();
     conn.close();
 %>
-<%--<%
-    //加载驱动程序
-    String driverName = "com.mysql.jdbc.Driver";
-//数据库信息
-    String userName = "JavaWeb";
-//密码
-    String userPasswd = "cdut6a502";
-//数据库名
-    String dbName = "JavaWeb";
-//表名
-    String tableName = "HomeNews";
-//将数据库信息字符串连接成为一个完整的url（也可以直接写成url，分开写是明了可维护性强）
-    String url = "jdbc:mysql://108.160.128.18/" + dbName + "?user=" + userName + "&password=" + userPasswd;
-    Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = null;
-    conn = DriverManager.getConnection(url);
-    Statement stmt = conn.createStatement();
-    String sql = "SELECT * FROM " + tableName;
-    ResultSet rs = stmt.executeQuery(sql);
-    int i = 0;
-    while (rs.next()) {
-        if (i > 8)
-            break;
-        readmore[i] = rs.getString(2);
-        lagetitle[i] = rs.getString(3);
-        titlemore[i] = rs.getString(4);
-        imageUrl[i] = rs.getString(5);
-
-        body[i] = rs.getString(6);
-        i += 1;
-    }
-    rs.close();
-    stmt.close();
-    conn.close();
-%>--%>
 <div>
 
 </div>
@@ -99,7 +64,7 @@
                     <li><a href="index-3.jsp">雷锋热线</a></li>
                     <li><a href="index-3.jsp">公益活动</a></li>
                     <li><a href="index-3.jsp">公益广告</a></li>
-                    <li><a href="index6.jsp">视频展示</a></li>
+                    <li><a href="index5.jsp">视频展示</a></li>
                 </ul>
             </div>
         </div>

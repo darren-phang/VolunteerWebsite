@@ -144,6 +144,7 @@
                     <li><a href="index-3.jsp">雷锋热线</a></li>
                     <li><a href="index-3.jsp">公益活动</a></li>
                     <li><a href="index-3.jsp">公益广告</a></li>
+                    <li><a href="index5.jsp">视频展示</a></li>
                 </ul>
             </div>
         </div>
@@ -193,17 +194,6 @@
                     <br>
                     <div id="output" style="position:absolute;left:0;left:0"><br></div>
                     <br></div>
-
-               <%-- <div class="grid9">
-                    <video width="<%=width%>" height="<%=height%>" controls="controls">
-                        <source src="<%=video%>" type="video/mp4"/>
-                    </video>
-                   &lt;%&ndash; <video width="<%=width%>" height="<%=height%>" controls="controls"
-                           src="<%=video%>" type="video/mp4"/>&ndash;%&gt;
-                    &lt;%&ndash;<video  src="./static/video/video1.mp4" type="video/mp4" >&ndash;%&gt;
-                    &lt;%&ndash;<embed  src="<%=video%>" width="<%=width%>" height="<%=height%>" autostart="false">&ndash;%&gt;
-                </div>--%>
-
             </div>
         </div>
     </div>
