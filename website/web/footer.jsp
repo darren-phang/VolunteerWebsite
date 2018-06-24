@@ -31,8 +31,7 @@
     </div>
     <div class="container">
         <div class="wrapper">
-            <div class="copy">&copyCDUT实训 2018 | <a href="index-4.html">Privacy
-                policy</a></div>
+            <div class="copy">&copyCDUT实训 2018</div>
         </div>
     </div>
 </footer>
