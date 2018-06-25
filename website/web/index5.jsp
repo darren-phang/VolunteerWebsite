@@ -42,11 +42,11 @@
     <nav style="background-color:#1f1f1f ">
         <div class="container">
             <h1><a href="index.jsp"><strong>志愿者</strong>服务</a></h1>
-            <div class="collapse navbar-collapse ">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown"></i>文明你我</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f">
+            <div class="collapse navbar-collapse">
+                <ul>
+                    <li class="dropdown"><a href="index.jsp" class="dropdown-toggle"
+                                            data-toggle="dropdown">文明你我</a>
+                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 80px;">
                             <div class="dropdown-inner" style="background-color: #1f1f1f;">
                                 <ul>
                                     <li><a style="color: white " href="archive.html">热门</a>
@@ -59,14 +59,14 @@
                     </li>
 
                     <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown"></i>志愿者APP</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f">
+                                            data-toggle="dropdown">志愿者APP</a>
+                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 111px">
                             <div class="dropdown-inner" style="background-color: #1f1f1f;">
                                 <ul>
-                                    <li><a style="color: white " href="archive.html">项目介绍</a></li>
-                                    <li><a style="color: white " href="archive.html">新闻专栏</a></li>
-                                    <li><a style="color: white " href="archive.html">志愿招募</a></li>
-                                    <li><a style="color: white " href="archive.html">活动地图</a></li>
+                                    <li><a style="color: white; " href="archive.html">项目介绍</a></li>
+                                    <li><a style="color: white; " href="archive.html">新闻专栏</a></li>
+                                    <li><a style="color: white; " href="archive.html">志愿招募</a></li>
+                                    <li><a style="color: white; " href="archive.html">活动地图</a></li>
                                 </ul>
 
                             </div>
@@ -74,8 +74,8 @@
                     </li>
 
                     <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown"></i>志愿者网</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f">
+                                            data-toggle="dropdown">志愿者网</a>
+                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 111px;">
                             <div class="dropdown-inner" style="background-color: #d92a7d;">
                                 <ul>
                                     <li><a style="color: white " href="archive.html">项目介绍</a></li>
@@ -88,8 +88,8 @@
                     </li>
 
                     <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown"></i>雷锋热线</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f">
+                                            data-toggle="dropdown">雷锋热线</a>
+                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 111px;">
                             <div class="dropdown-inner" style="background-color: #1f1f1f;">
                                 <ul>
                                     <li><a style="color: white " href="archive.html">项目介绍</a></li>
@@ -104,8 +104,8 @@
                     </li>
 
                     <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown"></i>公益活动</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f">
+                                            data-toggle="dropdown">公益活动</a>
+                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 125px;">
                             <div class="dropdown-inner" style="background-color: #1f1f1f;">
                                 <ul>
                                     <li><a style="color: white " href="archive.html">让轮椅飞</a></li>
@@ -117,8 +117,8 @@
                     </li>
 
                     <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown"></i>公益广告</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f">
+                                            data-toggle="dropdown">公益广告</a>
+                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 208px;">
                             <div class="dropdown-inner" style="background-color: #1f1f1f;">
                                 <ul>
                                     <li><a style="color: white " href="archive.html">图说我们的价值观</a>
@@ -128,6 +128,10 @@
                                 </ul>
                             </div>
                         </div>
+                    </li>
+
+                    <li class="dropdown"><a href="http://www.baidu.com" class="dropdown-toggle current"
+                                            data-toggle="dropdown">视频展示</a>
                     </li>
                 </ul>
             </div>
