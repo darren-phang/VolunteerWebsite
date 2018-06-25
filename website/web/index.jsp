@@ -27,22 +27,10 @@
     String[] imageUrl = new String[9];
     String[] body = new String[9];
 %>
+<%@ include file="db.jsp" %>
 <%
-    //加载驱动程序
-    String driverName = "com.mysql.jdbc.Driver";
-//数据库信息
-    String userName = "JavaWeb";
-//密码
-    String userPasswd = "cdut6a502";
-//数据库名
-    String dbName = "JavaWeb";
-//表名
+    //表名
     String tableName = "HomeNews";
-//将数据库信息字符串连接成为一个完整的url（也可以直接写成url，分开写是明了可维护性强）
-    String url = "jdbc:mysql://39.108.183.209/" + dbName + "?user=" + userName + "&password=" + userPasswd;
-    Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection(url);
-    Statement stmt = conn.createStatement();
     String sql = "SELECT * FROM " + tableName;
     ResultSet rs = stmt.executeQuery(sql);
     int i = 0;
@@ -54,7 +42,6 @@
         titlemore[i] = rs.getString(4);
         imageUrl[i] = rs.getString(5);
 
-        System.out.println(imageUrl[i]);
         body[i] = rs.getString(6);
         i += 1;
     }
@@ -72,11 +59,12 @@
                 <h1><a href="index.jsp"><strong>志愿者</strong>服务</a></h1>
                 <ul>
                     <li><a href="index.jsp" class="current">文明你我</a></li>
-                    <li><a href="index-1.html">志愿者APP</a></li>
+                    <li><a href="index-1.jsp">志愿者APP</a></li>
                     <li><a href="index-2.jsp">志愿者网</a></li>
-                    <li><a href="index-3.html">雷锋热线</a></li>
-                    <li><a href="index-3.html">公益活动</a></li>
-                    <li><a href="index-3.html">公益广告</a></li>
+                    <li><a href="index-3.jsp">雷锋热线</a></li>
+                    <li><a href="index-3.jsp">公益活动</a></li>
+                    <li><a href="index-3.jsp">公益广告</a></li>
+                    <li><a href="index5.jsp">视频展示</a></li>
                 </ul>
             </div>
         </div>
@@ -119,7 +107,7 @@
                             自愿参与社会公益活动的人。享受乘坐公交车，地铁免费，免费进公园及旅游景点。
                             志愿者也叫义工、义务工作者或志工。他们致力于免费、无偿地为社会进步贡献自己的力量。
                             志愿工作是指一种具有组织性的助人及基于社会公益责任的参与行为，其发展可追溯至第二次世界大战后，福利主义抬头导致各国政府支出崩塌，发展义务工作以解决社会上不胜负荷的需求。</p>
-                        <a href="http://www.zgzyz.org.cn/" class="extra-button">更多</a>
+                        <a href="http://www.zgzyz.org.cn/" target="_blank" class="extra-button">更多</a>
                     </div>
                 </section>
             </div>
@@ -140,8 +128,7 @@
                         </a></li>
                         <li><a href="#" onmouseenter="changeContent(4)"><%=lagetitle[4]%>
                         </a></li>
-                        <li><a href="#" name="six"
-                               onmouseenter="changeContent(5)"><%=lagetitle[5]%>
+                        <li><a href="#" onmouseenter="changeContent(5)"><%=lagetitle[5]%>
                         </a></li>
                         <li><a href="#" onmouseenter="changeContent(6)"><%=lagetitle[6]%>
                         </a></li>
@@ -157,7 +144,7 @@
                     </h2>
                     <p id="newscontent"><%=body[showindex]%>
                     </p>
-                    <p><a id="newsurl" href=<%=readmore[showindex]%>>了解更多</a></p>
+                    <p><a id="newsurl" target="_blank" href=<%=readmore[showindex]%> >了解更多</a></p>
 
                     <section class="images">
                         <figure id="figure1" style="height: 200px; width: 200px  ;"><a><img
@@ -174,11 +161,11 @@
 
 </section>
 
+<%--<script type="text/javascript" src="js/html5.js"></script>--%>
 
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
-<script type="text/javascript" src="js/html5.js"></script>
 <script type="text/javascript">
     var body = new Array();
     var title = new Array();
@@ -190,48 +177,54 @@
     url[<%=j%>] = " <%=readmore[j]%> ";
     imgurl[<%=j%>] = " <%=imageUrl[j]%> ";
     <% } %>
-    function addImg(index){
+
+    function addImg(index) {
         var imgurls = new Array();
         imgurls[0] = imgurl[index].split(";")[0];
         imgurls[1] = imgurl[index].split(";")[1];
         imgurls[2] = imgurl[index].split(";")[2];
-        var i=0;
+        var i = 0;
         for (; i < 3; ++i) {
             var str = "img" + (i + 1);
             var figure = "figure" + (i + 1);
-            document.getElementById(figure).style.display="none";
-            if(imgurls[i]!=" null "&&imgurls[i]!=undefined){
-                document.getElementById(figure).style.display="";
+            document.getElementById(figure).style.display = "none";
+            if (imgurls[i] != " null " && imgurls[i] != undefined) {
+                document.getElementById(figure).style.display = "";
                 document.getElementById(str).src = imgurls[i].trim();
             }
         }
     }
+
     function changeContent(index) {
         newstitle.innerText = title[index];
         newscontent.innerText = body[index];
         newsurl.href = url[index];
         addImg(index);
-       /* var imgurls = imgurl[index].split(";");
-        for (var i = 0; i < imgurls.length; i++) {
-            var str = "img" + (i + 1);
-            document.getElementById(str).src = imgurls[i];
-            /!* var div2=document.createElement("div");
-             div2.innerHTML="aaaaa"
-             document.getElementById("images").appendChild(div2);*!/
-
-            /!* console.log(imgurls[i]);
-             var div = document.createElement("figure");
-             div.innerHTML = "<a href=\"#\"><img class=\"center-cropped\" src=\"" + imgurls[i] + "\"></a>";
-             document.getElementsByClassName("images").appendChild(div);*!/
-        }*/
-
-
     }
 
+
+    /**
+     * 动态更新图片
+     * @param index
+     */
+    function updateImg(index) {
+        var imgurls = imgurl[index].split(";");
+        var parent = document.getElementById("images");
+        $("#images").empty();
+        for (var i = 0; i < imgurls.length; i++) {
+            if (imgurls[i] == " null " || imgurls[i].charAt(imgurls[i].length - 1) == '.') continue;
+            var figure = document.createElement("figure");
+            figure.setAttribute("style", "height: 100px; width: 100px;display:inline;padding: 5px");
+            var img = document.createElement("img");
+            img.setAttribute("class", "center-cropped");
+            img.src = imgurls[i];
+            figure.appendChild(img);
+            parent.appendChild(figure);
+        }
+    }
+    changeContent(0);
 </script>
-<script type="text/javascript">
-    window.onload=changeContent(0);
-</script>
+
 <%@ include file="footer.jsp" %>
 
 </body>
