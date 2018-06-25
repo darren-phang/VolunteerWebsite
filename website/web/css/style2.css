@@ -1150,7 +1150,7 @@ li.tweets_avatar {
 }
 
 .zoom-container:hover .zoom-caption {
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 /* ---------------------------------------------------------------------------- */
