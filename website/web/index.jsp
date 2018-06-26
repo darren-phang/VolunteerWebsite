@@ -76,7 +76,6 @@
             </ul>
             <form action="" id="search-form">
                 <fieldset>
-
                     <input type="text" value=""><input type="submit" value="">
                 </fieldset>
             </form>

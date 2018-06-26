@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.sql.*" %>
 <html>
 <head>
     <title>Title</title>
@@ -15,6 +14,7 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
 </head>
 <body>
 
@@ -55,16 +55,13 @@
             <div class="clearfix">
                 <div class="grid9">
                     <h3>发表文章</h3>
-                    <form action="" name="title_form">
-                        <textarea name="title" style="height: 30px; width: 600px; font-size: 21px" wrap="soft" ></textarea>
-                        <br><br>
-                        <textarea name="article" style="height: 400px; width: 800px; font-size: 20px;" wrap="soft"></textarea>
-                        <a href="#">添加附件</a>
-                        <div style="text-align: right">
-                            <button style="text-align: center;">发表</button>
-                        </div>
-
-                    </form>
+                    <textarea name="Ptitle" id="title" style="height: 30px; width: 600px; font-size: 21px" wrap="soft" ></textarea>
+                    <br><br>
+                    <textarea name="Particle" id="article" style="height: 400px; width: 800px; font-size: 20px;" wrap="soft"></textarea>
+                    <a href="#">添加附件</a>
+                    <div style="text-align: right">
+                        <button style="text-align: center;" onclick="sentmessage()">发表</button>
+                    </div>
                     </div>
             </div>
         </div>
@@ -117,5 +114,15 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript" language="JavaScript">
+    function sentmessage() {
+        var title = document.getElementById("title").value;
+        var article = document.getElementById("article").value;
+        var image_url = "";
+        var video_url = "";
+        // window.location.href='http://blog.sina.com.cn/mleavs';
+        window.open("insetDatabase.jsp?title="+title+"&article="+article+"&image_url="+image_url+"&video_url="+video_url);
+    }
+</script>
 </body>
 </html>
