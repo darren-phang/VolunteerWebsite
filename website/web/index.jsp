@@ -64,7 +64,7 @@
                     <li><a href="index-3.jsp">雷锋热线</a></li>
                     <li><a href="index-3.jsp">公益活动</a></li>
                     <li><a href="index-3.jsp">公益广告</a></li>
-                    <li><a href="index5.jsp">视频展示</a></li>
+                    <li><a href="index-6.jsp">视频展示</a></li>
                 </ul>
             </div>
         </div>
@@ -76,6 +76,7 @@
             </ul>
             <form action="" id="search-form">
                 <fieldset>
+
                     <input type="text" value=""><input type="submit" value="">
                 </fieldset>
             </form>
