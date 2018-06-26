@@ -55,16 +55,29 @@
             <div class="clearfix">
                 <div class="grid9">
                     <h3>发表文章</h3>
-                    <form method="post" action="insetDatabase.jsp">
+                    <form method="post" action="" id="textAndImg">
                         <textarea name="title" style="height: 30px; width: 600px; font-size: 21px" wrap="soft" ></textarea>
                         <br><br>
                         <textarea name="article" style="height: 400px; width: 800px; font-size: 20px;" wrap="soft"></textarea>
-                        <a href="#">添加附件</a>
+                        <input name="image_url" type="text" value="" style="display: none">
+                        <input name="video_url" type="text" value="" style="display: none">
+                        <%--<form action="UploadServlet" method="post" enctype="multipart/form-data"--%>
+                              <%--style="text-align: center;" id="imgform">--%>
+                        <%--</form>--%>
                         <div style="text-align: right">
-                            <input type="submit" value="发表">&nbsp;
+                            <%--<a href="#" class="alt" onClick="">发表</a>&nbsp;--%>
+                            <input type="submit" value="发表" onclick="textSubmit()">
                             <input type="reset" value="取消">
                         </div>
                     </form>
+                    <form method="post" action="" id="ImgAndvedio">
+                        <div style="text-align: left">
+                            <input type="file" name="uploadfile" style="color: black" onchange="fileschoose()">
+                            <button type="submit" id="filecent" onClick="fileSubmit()" style="display: none"></button>
+                        </div>
+                    </form>
+
+
                     </div>
             </div>
         </div>
@@ -117,14 +130,17 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" language="JavaScript">
-    function sentmessage() {
-        var title = document.getElementById("title").value;
-        var article = document.getElementById("article").value;
-        var image_url = "";
-        var video_url = "";
-        // window.location.href='http://blog.sina.com.cn/mleavs';
-        window.open("insetDatabase.jsp?title="+title+"&article="+article+"&image_url="+image_url+"&video_url="+video_url);
+<script type="text/javascript">
+    function fileschoose() {
+        document.getElementById("filecent").click();
+    }
+    function fileSubmit(){
+        document.getElementById('ImgAndvedio').setAttribute("action","UploadServlet");
+        document.getElementById('ImgAndvedio').setAttribute("enctype","multipart/form-data");
+
+    }
+    function textSubmit() {
+        document.getElementById('textAndImg').setAttribute("action","insetDatabase.jsp");
     }
 </script>
 </body>

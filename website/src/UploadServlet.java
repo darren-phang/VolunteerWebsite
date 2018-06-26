@@ -64,8 +64,9 @@ public class UploadServlet extends HttpServlet {
                 for (FileItem item : formItems) {
                     if (!item.isFormField()) {
                         String fileName = new File(item.getName()).getName();
-//                        String filePath = uploadPath +File.separator+ fileName;
-                        String filePath="E:\\学习文件\\第一次实训\\javaWeb\\website\\out";
+                        String filePath = uploadPath +File.separator+ fileName;
+//                        System.out.println(fileName);
+//                        String filePath="E:\\学习文件\\第一次实训\\javaWeb\\website\\out\\"+fileName;
                         File storeFile = new File(filePath);
 
                         System.out.println(filePath);
