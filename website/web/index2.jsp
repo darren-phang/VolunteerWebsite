@@ -139,12 +139,13 @@
                 <h1><a href="index.jsp"><strong>志愿者</strong>服务</a></h1>
                 <ul>
                     <li><a href="index.jsp">文明你我</a></li>
-                    <li><a href="index-1.jsp">志愿者APP</a></li>
-                    <li><a href="index-2.jsp" class="current">志愿者网</a></li>
-                    <li><a href="index-5.jsp">雷锋热线</a></li>
-                    <li><a href="index-3.jsp">公益活动</a></li>
-                    <li><a href="index-3.jsp">公益广告</a></li>
-                    <li><a href="index-6.jsp">视频展示</a></li>
+                    <li><a href="index1.jsp">志愿者APP</a></li>
+                    <li><a href="index2.jsp" class="current">志愿者网</a></li>
+                    <li><a href="index3.jsp">雷锋热线</a></li>
+                    <li><a href="index4.jsp">公益活动</a></li>
+                    <li><a href="index5.jsp">公益广告</a></li>
+                    <li><a href="video.jsp">视频展示</a></li>
+                    <li><a href="publish.jsp">发布文章</a></li>
                 </ul>
             </div>
         </div>

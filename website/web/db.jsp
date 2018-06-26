@@ -20,7 +20,7 @@
 
 //将数据库信息字符串连接成为一个完整的url（也可以直接写成url，分开写是明了可维护性强）
 //    String url = "jdbc:mysql://108.160.128.18/" + dbName + "?user=" + userName + "&password=" + userPasswd;
-    String url = "jdbc:mysql://39.108.183.209/" + dbName + "?user=" + userName + "&password=" + userPasswd;
+    String url = "jdbc:mysql://39.108.183.209/" + dbName + "?user=" + userName + "&password=" + userPasswd+ "&useUnicode=true&characterEncoding=utf-8";
 /*//数据库信息
     String userName = "cwj";
 //密码

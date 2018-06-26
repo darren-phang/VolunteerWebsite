@@ -58,11 +58,10 @@
     rs = stmt.executeQuery(getCommonSql);
 
 
-
     String[] commonVideoUrl = new String[5];
     String[] commonVideoImgUrl = new String[5];
     i = 0;
-    while ( rs.next()) {
+    while (rs.next()) {
         commonVideoUrl[i] = rs.getString(2);
         commonVideoImgUrl[i] = rs.getString(3);
         i++;
@@ -71,14 +70,17 @@
     String getFeatureSql = "SELECT * FROM video where featureVideo =1";
     rs = stmt.executeQuery(getFeatureSql);
 
+    String[] featureVideoDescribe = new String[2];
     String[] featureVideoUrl = new String[2];
     String[] featureVideoImgUrl = new String[2];
     i = 0;
-    while ( rs.next()) {
+    while (rs.next()) {
         featureVideoUrl[i] = rs.getString(2);
         featureVideoImgUrl[i] = rs.getString(3);
+        featureVideoDescribe[i] = rs.getString(5);
         i++;
     }
+
 
     rs.close();
     stmt.close();
@@ -88,7 +90,7 @@
 <header>
     <!--Navigation-->
     <nav style="background-color:#1f1f1f ">
-        <div class="container">
+        <div class="container" style="width: 1200px">
             <h1><a href="index.jsp"><strong>志愿者</strong>服务</a></h1>
             <div class="collapse navbar-collapse">
                 <ul>
@@ -97,9 +99,9 @@
                         <div class="dropdown-menu" style="background-color: #1f1f1f; width: 80px;">
                             <div class="dropdown-inner" style="background-color: #1f1f1f;">
                                 <ul>
-                                    <li><a style="color: white " href="archive.html">热门</a>
+                                    <li><a style="color: white " href="index.jsp">热门</a>
                                     </li>
-                                    <li><a style="color: white " href="archive.html">最新</a>
+                                    <li><a style="color: white " href="index.jsp">最新</a>
                                     </li>
                                 </ul>
                             </div>
@@ -111,10 +113,10 @@
                         <div class="dropdown-menu" style="background-color: #1f1f1f; width: 111px">
                             <div class="dropdown-inner" style="background-color: #1f1f1f;">
                                 <ul>
-                                    <li><a style="color: white; " href="archive.html">项目介绍</a></li>
-                                    <li><a style="color: white; " href="archive.html">新闻专栏</a></li>
-                                    <li><a style="color: white; " href="archive.html">志愿招募</a></li>
-                                    <li><a style="color: white; " href="archive.html">活动地图</a></li>
+                                    <li><a style="color: white; " href="index1.jsp">项目介绍</a></li>
+                                    <li><a style="color: white; " href="index1.jsp">新闻专栏</a></li>
+                                    <li><a style="color: white; " href="index1.jsp">志愿招募</a></li>
+                                    <li><a style="color: white; " href="index1.jsp">活动地图</a></li>
                                 </ul>
 
                             </div>
@@ -126,10 +128,10 @@
                         <div class="dropdown-menu" style="background-color: #1f1f1f; width: 111px;">
                             <div class="dropdown-inner" style="background-color: #d92a7d;">
                                 <ul>
-                                    <li><a style="color: white " href="archive.html">项目介绍</a></li>
-                                    <li><a style="color: white " href="archive.html">新闻专栏</a></li>
-                                    <li><a style="color: white " href="archive.html">宣传视频</a></li>
-                                    <li><a style="color: white " href="archive.html">专题活动</a></li>
+                                    <li><a style="color: white " href="index2.jsp">项目介绍</a></li>
+                                    <li><a style="color: white " href="index2.jsp">新闻专栏</a></li>
+                                    <li><a style="color: white " href="index2.jsp">宣传视频</a></li>
+                                    <li><a style="color: white " href="index2.jsp">专题活动</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -140,12 +142,12 @@
                         <div class="dropdown-menu" style="background-color: #1f1f1f; width: 111px;">
                             <div class="dropdown-inner" style="background-color: #1f1f1f;">
                                 <ul>
-                                    <li><a style="color: white " href="archive.html">项目介绍</a></li>
-                                    <li><a style="color: white " href="archive.html">新闻专栏</a></li>
-                                    <li><a style="color: white " href="archive.html">我要求助</a></li>
-                                    <li><a style="color: white " href="archive.html">我要帮扶</a></li>
-                                    <li><a style="color: white " href="archive.html">品牌活动</a></li>
-                                    <li><a style="color: white " href="archive.html">宣传视频</a></li>
+                                    <li><a style="color: white " href="index3.jsp">项目介绍</a></li>
+                                    <li><a style="color: white " href="index3.jsp">新闻专栏</a></li>
+                                    <li><a style="color: white " href="index3.jsp">我要求助</a></li>
+                                    <li><a style="color: white " href="index3.jsp">我要帮扶</a></li>
+                                    <li><a style="color: white " href="index3.jsp">品牌活动</a></li>
+                                    <li><a style="color: white " href="index3.jsp">宣传视频</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -156,9 +158,9 @@
                         <div class="dropdown-menu" style="background-color: #1f1f1f; width: 125px;">
                             <div class="dropdown-inner" style="background-color: #1f1f1f;">
                                 <ul>
-                                    <li><a style="color: white " href="archive.html">让轮椅飞</a></li>
-                                    <li><a style="color: white " href="archive.html">名师一堂课</a></li>
-                                    <li><a style="color: white " href="archive.html">睡前讲故事</a></li>
+                                    <li><a style="color: white " href="index4.jsp">让轮椅飞</a></li>
+                                    <li><a style="color: white " href="index4.jsp">名师一堂课</a></li>
+                                    <li><a style="color: white " href="index4.jsp">睡前讲故事</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -169,9 +171,9 @@
                         <div class="dropdown-menu" style="background-color: #1f1f1f; width: 208px;">
                             <div class="dropdown-inner" style="background-color: #1f1f1f;">
                                 <ul>
-                                    <li><a style="color: white " href="archive.html">图说我们的价值观</a>
+                                    <li><a style="color: white " href="index5.jsp">图说我们的价值观</a>
                                     </li>
-                                    <li><a style="color: white " href="archive.html">“讲文明
+                                    <li><a style="color: white " href="index5.jsp">“讲文明
                                         树新风”公益广告</a></li>
                                 </ul>
                             </div>
@@ -182,7 +184,9 @@
                                             class="dropdown-toggle current"
                                             data-toggle="dropdown">视频展示</a>
                     </li>
+                    <li><a href="video.jsp">上传视频</a></li>
                 </ul>
+
             </div>
         </div>
     </nav>
@@ -273,7 +277,7 @@
                                     </div>
 
                                 </div>
-                                <p class="more">.</p>
+                                <p class="more"><%=featureVideoDescribe[0]%></p>
                                 <a href="single.html" class="btn btn-1">更多</a>
 
                             </div>
@@ -290,7 +294,7 @@
                                         <img src="<%=featureVideoImgUrl[1]%>">
                                     </div>
                                 </div>
-                                <p class="more">.</p>
+                                <p class="more"><%=featureVideoDescribe[1]%></p>
                                 <a href="single.html" class="btn btn-1">更多</a>
                             </div>
                         </div>
@@ -337,12 +341,12 @@
 
 
         <% for(int j=0;j <slideVideoUrl.length;j++){ %>
-            var div = document.createElement("div");
-            div.setAttribute("class", "item");
-            var all = one + "<%=slideVideoUrl[j]%>" +two + "<%=slideVideoImgUrl[j]%>" +three;
-            div.innerHTML = all;
-            parent.appendChild(div);
-            <% System.out.println(j+"aaa"+slideVideoUrl[i]);%>
+        var div = document.createElement("div");
+        div.setAttribute("class", "item");
+        var all = one + "<%=slideVideoUrl[j]%>" + two + "<%=slideVideoImgUrl[j]%>" + three;
+        div.innerHTML = all;
+        parent.appendChild(div);
+        <% System.out.println(j+"aaa"+slideVideoUrl[i]);%>
         <% }%>
     }
 
