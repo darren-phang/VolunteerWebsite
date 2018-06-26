@@ -22,7 +22,6 @@
         <br/>
         <button type="submit" class="button button-3d button-primary button-rounded">提交</button>
         <button type="button" onclick="history.back(-1)" class="button button-3d button-primary button-rounded">取消</button>
-
     </form>
 </body>
 </html>

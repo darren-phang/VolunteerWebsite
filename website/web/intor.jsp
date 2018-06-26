@@ -55,13 +55,16 @@
             <div class="clearfix">
                 <div class="grid9">
                     <h3>发表文章</h3>
-                    <textarea name="Ptitle" id="title" style="height: 30px; width: 600px; font-size: 21px" wrap="soft" ></textarea>
-                    <br><br>
-                    <textarea name="Particle" id="article" style="height: 400px; width: 800px; font-size: 20px;" wrap="soft"></textarea>
-                    <a href="#">添加附件</a>
-                    <div style="text-align: right">
-                        <button style="text-align: center;" onclick="sentmessage()">发表</button>
-                    </div>
+                    <form method="post" action="insetDatabase.jsp">
+                        <textarea name="title" style="height: 30px; width: 600px; font-size: 21px" wrap="soft" ></textarea>
+                        <br><br>
+                        <textarea name="article" style="height: 400px; width: 800px; font-size: 20px;" wrap="soft"></textarea>
+                        <a href="#">添加附件</a>
+                        <div style="text-align: right">
+                            <input type="submit" value="发表">&nbsp;
+                            <input type="reset" value="取消">
+                        </div>
+                    </form>
                     </div>
             </div>
         </div>
