@@ -15,6 +15,5 @@
         alert("${message}");
         window.history.back();
     </script>
-
 </body>
 </html>

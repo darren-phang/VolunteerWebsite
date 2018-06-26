@@ -23,29 +23,7 @@
     String artic_title;
     String vedio_url;
 %>
-<%
-    String userName = "JavaWeb";
-//密码
-    String userPasswd = "cdut6a502";
-//数据库名
-    String dbName = "JavaWeb";
-
-//将数据库信息字符串连接成为一个完整的url（也可以直接写成url，分开写是明了可维护性强）
-//    String url = "jdbc:mysql://108.160.128.18/" + dbName + "?user=" + userName + "&password=" + userPasswd;
-    String url = "jdbc:mysql://39.108.183.209/" + dbName + "?user=" + userName + "&password=" + userPasswd;
-/*//数据库信息
-    String userName = "cwj";
-//密码
-    String userPasswd = "strive123";
-//数据库名
-    String dbName = "javaweb";
-
-//将数据库信息字符串连接成为一个完整的url（也可以直接写成url，分开写是明了可维护性强）
-    String url = "jdbc:mysql://localhost/" + dbName + "?user=" + userName + "&password=" + userPass*/
-
-    Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection conn = DriverManager.getConnection(url);
-%>
+<%@include file="db.jsp"%>
 <%
     //表名
     int id = Integer.parseInt(request.getParameter("id"));
@@ -62,11 +40,6 @@
     rs.close();
     ps.close();
     conn.close();
-//
-
-//    rs.close();
-//    stmt.close();
-//    conn.close();
 %>
 <header>
     <nav>
@@ -75,12 +48,12 @@
                 <h1><a href="index.jsp"><strong>志愿者</strong>服务</a></h1>
                 <ul>
                     <li><a href="index.jsp">文明你我</a></li>
-                    <li><a href="index-1.jsp">志愿者APP</a></li>
-                    <li><a href="index-2.jsp">志愿者网</a></li>
-                    <li><a href="index-3.jsp">雷锋热线</a></li>
-                    <li><a href="index-3.jsp">公益活动</a></li>
-                    <li><a href="index-3.jsp">公益广告</a></li>
-                    <li><a href="index5.jsp">视频展示</a></li>
+                    <li><a href="index1.jsp">志愿者APP</a></li>
+                    <li><a href="index2.jsp">志愿者网</a></li>
+                    <li><a href="index3.jsp">雷锋热线</a></li>
+                    <li><a href="index3.jsp">公益活动</a></li>
+                    <li><a href="index3.jsp">公益广告</a></li>
+                    <li><a href="video.jsp">视频展示</a></li>
                 </ul>
             </div>
         </div>
@@ -106,7 +79,7 @@
                 <div class="grid9">
                     <h2 style="line-height: 35px"><%=artic_title%></h2>
                     <div class="img-box">
-                        <figure id="img1"><img src="<%=image_url%>" alt="" height="200" width="300"></figure>
+                        <figure id="img1"><img src="images/userImg/<%=image_url%>" alt="" height="200" width="300"></figure>
                         <p style="word-wrap: break-word; font-size: large; line-height: 30px"><%=articel%>
                         </p>
                     </div>
