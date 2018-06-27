@@ -148,10 +148,10 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form id="login-form" action="Login"
+                            <form id="login-form" action="Login" onsubmit="return login()"
                                   method="post" role="form" style="display: block;">
                                 <div class="form-group">
-                                    <input type="text" name="uid" id="username" tabindex="1"
+                                    <input type="text" name="uid" id="uid" tabindex="1"
                                            class="form-control" placeholder="用户名" value="">
                                 </div>
                                 <div class="form-group">
@@ -180,10 +180,10 @@
                                     </div>
                                 </div>
                             </form>
-                            <form id="register-form" action="#"
+                            <form id="register-form" action="Register" onsubmit="return register()"
                                   method="post" role="form" style="display: none;">
                                 <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1"
+                                    <input type="text" name="uid" id="username" tabindex="1"
                                            class="form-control" placeholder="用户名" value="">
                                 </div>
                                 <div class="form-group">
@@ -192,7 +192,7 @@
                                            value="">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" id="password"
+                                    <input type="password" name="pwd" id="pwd"
                                            tabindex="2" class="form-control" placeholder="密码">
                                 </div>
                                 <div class="form-group">
@@ -220,18 +220,39 @@
 </div>
 </body>
 <script type="text/javascript">
+    function login() {
+        if (document.getElementById("uid").value.contains(" ")) {
+            alert("用户名不能包含空格！");
+            return false;
+        }
+        return true;
+    }
+
+    function register() {
+        if (document.getElementById("pwd").value != document.getElementById("confirm-password").value) {
+            alert("密码不一致");
+            return false;
+        }
+        return true;
+    }
+</script>
+<script type="text/javascript">
     if ("<%=action%>" == "register") {
         $("#register-form").delay(100).fadeIn(100);
         $("#login-form").fadeOut(100);
         $('#login-form-link').removeClass('active');
         $('#register-form-link').addClass('active');
         e.preventDefault();
-    }else {
+    } else if ("<%=action%>" == "login") {
         $("#login-form").delay(100).fadeIn(100);
         $("#register-form").fadeOut(100);
         $('#register-form-link').removeClass('active');
         $('#login-form-link').addClass('active');
         e.preventDefault();
+    } else if ("<%=action%>" == "error") {
+        alert("帐号密码错误~!")
+    }else if ("<%=action%>" == "success"){
+        alert("注册成功!")
     }
 
     $(function () {
@@ -249,7 +270,7 @@
             $(this).addClass('active');
             e.preventDefault();
         });
-
     });
+
 </script>
 </html>
