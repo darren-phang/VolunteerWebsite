@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/jquery-ui-1.8.5.custom.css" type="text/css" media="all">
-
 </head>
 
 <body>
@@ -25,7 +24,9 @@
     String[] titlemore = new String[9];
     String[] imageUrl = new String[9];
     String[] body = new String[9];
+
 %>
+<%@ include file="logincookie.jsp"%>
 <%@ include file="db.jsp" %>
 <%
     //表名5
@@ -48,9 +49,7 @@
     stmt.close();
     conn.close();
 %>
-<div>
 
-</div>
 <header>
     <nav>
         <div class="container">
@@ -76,8 +75,15 @@
             </ul>
             <form action="" id="search-form">
                 <fieldset>
+                    <div id="login1">
+                        <a href="LoginAndRegister.jsp?action=login">登陆</a>&nbsp;&nbsp;
+                        <a href="LoginAndRegister.jsp?action=register">去注册</a>
+                    </div>
+                    <div id="login2" style="display: none">
+                        欢迎你&nbsp; <a href="#"><%=uesrname%></a>&nbsp;
+                        <button id="exit" onclick="logout()">退出登陆</button>
+                    </div>
 
-                    <input type="text" value=""><input type="submit" value="">
                 </fieldset>
             </form>
         </div>
@@ -223,6 +229,30 @@
         }
     }
     changeContent(0);
+</script>
+
+<script type="text/javascript">
+    var login = <%=has_login%>;
+    if (login){
+        document.getElementById('login1').style.display = "none";
+        document.getElementById('login2').style.display = "";
+    }
+    else {
+        document.getElementById('login2').style.display = "none";
+        document.getElementById('login1').style.display = "";
+    }
+
+    function logout(){
+        var myDate=new Date();
+        myDate.setTime(-1000);//设置时间
+        var data=document.cookie;
+        var dataArray=data.split("; ");
+        for(var i=0;i<dataArray.length;i++){
+            var varName=dataArray[i].split("=");
+            document.cookie=varName[0]+"=''; expires="+myDate.toGMTString();
+        }
+
+    }
 </script>
 
 <%@ include file="footer.jsp" %>

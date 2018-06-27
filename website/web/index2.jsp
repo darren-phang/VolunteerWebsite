@@ -43,7 +43,7 @@
 
 <body>
 <%@ include file="db.jsp" %>
-
+<%@ include file="logincookie.jsp"%>
 <%
     //表名
     String tableName1 = "Index2intor";
@@ -57,8 +57,7 @@
     }
 %>
 <%
-
-    String sql = "SELECT * FROM " + tableName2 + " order by sendtime;";
+    String sql = "SELECT * FROM " + tableName2 + " order by sendtime DESC ;";
     ResultSet rs = stmt.executeQuery(sql);
     int i = 0;
     while (rs.next()) {
@@ -158,7 +157,14 @@
             <form action="" id="search-form">
                 <fieldset>
 
-                    <input type="text" value=""><input type="submit" value="">
+                    <div id="login1">
+                        <a href="LoginAndRegister.jsp?action=login">登陆</a>&nbsp;&nbsp;
+                        <a href="LoginAndRegister.jsp?action=register">去注册</a>
+                    </div>
+                    <div id="login2" style="display: none">
+                        欢迎你&nbsp;<a href="#"><%=uesrname%></a>&nbsp;
+                        <button id="exit" onclick="logout()">退出登陆</button>
+                    </div>
                 </fieldset>
             </form>
         </div>
@@ -297,6 +303,29 @@
     </div>
 </section>
 <%@ include file="footer.jsp" %>
+<script type="text/javascript">
+    var login = <%=has_login%>;
+    if (login){
+        document.getElementById('login1').style.display = "none";
+        document.getElementById('login2').style.display = "";
+    }
+    else {
+        document.getElementById('login2').style.display = "none";
+        document.getElementById('login1').style.display = "";
+    }
+
+    function logout(){
+        var myDate=new Date();
+        myDate.setTime(-1000);//设置时间
+        var data=document.cookie;
+        var dataArray=data.split("; ");
+        for(var i=0;i<dataArray.length;i++){
+            var varName=dataArray[i].split("=");
+            document.cookie=varName[0]+"=''; expires="+myDate.toGMTString();
+        }
+
+    }
+</script>
 </body>
 
 </html>
