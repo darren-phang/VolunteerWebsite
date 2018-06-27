@@ -47,25 +47,25 @@
 <%
     //表名
     String tableName1 = "Index2intor";
-    String tableName2 = "Index2news";
+    String tableName2 = "Index3news";
     String tableName3 = "Index2activity";
-    String[] hrefs = new String[15];
+    int[] hrefs = new int[15];
     String[] titles = new String[15];
     for (int i = 0; i < 15; i++) {
-        hrefs[i] = "";
+        hrefs[i] = 0;
         titles[i] = "";
     }
 %>
 <%
 
-    String sql = "SELECT * FROM " + tableName2;
+    String sql = "SELECT * FROM " + tableName2 + " order by sendtime;";
     ResultSet rs = stmt.executeQuery(sql);
     int i = 0;
     while (rs.next()) {
         if (i > 14)
             break;
         titles[i] = rs.getString(2);
-        hrefs[i] = rs.getString(3);
+        hrefs[i] = rs.getInt(3);
         i += 1;
     }
     rs.close();
@@ -216,43 +216,43 @@
                     <div class="clearfix">
                         <div class="grid3 first">
                             <ul class="list3">
-                                <li><a target="_blank" href="<%=hrefs[0]%>"><%=titles[0]%>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[0]%>"><%=titles[0]%>
                                 </a></li>
-                                <li><a target="_blank" href="<%=hrefs[1]%>"><%=titles[1]%>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[1]%>"><%=titles[1]%>
                                 </a></li>
-                                <li><a target="_blank" href="<%=hrefs[2]%>"><%=titles[2]%>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[2]%>"><%=titles[2]%>
                                 </a></li>
-                                <li><a target="_blank" href="<%=hrefs[3]%>"><%=titles[3]%>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[3]%>"><%=titles[3]%>
                                 </a></li>
-                                <li><a target="_blank" href="<%=hrefs[4]%>"><%=titles[4]%>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="grid3">
-                            <ul class="list3">
-                                <li><a target="_blank" href="<%=hrefs[5]%>"><%=titles[5]%>
-                                </a></li>
-                                <li><a target="_blank" href="<%=hrefs[6]%>"><%=titles[6]%>
-                                </a></li>
-                                <li><a target="_blank" href="<%=hrefs[7]%>"><%=titles[7]%>
-                                </a></li>
-                                <li><a target="_blank" href="<%=hrefs[8]%>"><%=titles[8]%>
-                                </a></li>
-                                <li><a target="_blank" href="<%=hrefs[9]%>"><%=titles[9]%>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[4]%>"><%=titles[4]%>
                                 </a></li>
                             </ul>
                         </div>
                         <div class="grid3">
                             <ul class="list3">
-                                <li><a target="_blank" href="<%=hrefs[10]%>"><%=titles[10]%>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[5]%>"><%=titles[5]%>
                                 </a></li>
-                                <li><a target="_blank" href="<%=hrefs[11]%>"><%=titles[11]%>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[6]%>"><%=titles[6]%>
                                 </a></li>
-                                <li><a target="_blank" href="<%=hrefs[12]%>"><%=titles[12]%>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[7]%>"><%=titles[7]%>
                                 </a></li>
-                                <li><a target="_blank" href="<%=hrefs[13]%>"><%=titles[13]%>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[8]%>"><%=titles[8]%>
                                 </a></li>
-                                <li><a target="_blank" href="<%=hrefs[14]%>"><%=titles[14]%>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[9]%>"><%=titles[9]%>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <div class="grid3">
+                            <ul class="list3">
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[10]%>"><%=titles[10]%>
+                                </a></li>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[11]%>"><%=titles[11]%>
+                                </a></li>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[12]%>"><%=titles[12]%>
+                                </a></li>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[13]%>"><%=titles[13]%>
+                                </a></li>
+                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[14]%>"><%=titles[14]%>
                                 </a></li>
                             </ul>
                         </div>
