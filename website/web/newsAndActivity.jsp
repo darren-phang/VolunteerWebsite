@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="com.sun.org.apache.xpath.internal.operations.Or" %>
 <html>
 <head>
     <title>Title</title>
@@ -17,30 +18,46 @@
     <script type="text/javascript" src="js/html5.js"></script>
 </head>
 <body>
+<%@include file="db.jsp"%>
 <%!
     String articel;
     String image_url;
+    String organizer;
     String artic_title;
     String vedio_url;
+    String OrganOrWriter;
 %>
-<%@include file="db.jsp"%>
+
 <%
-    //表名
+        //表名
     int id = Integer.parseInt(request.getParameter("id"));
-    String sql = "SELECT * FROM NEWS where id = ?;";
+    String tableName;
+    if (request.getParameter("action").equals("activity"))
+    {
+        OrganOrWriter = "组织者";
+        tableName = "Activities";
+    }
+    else {
+        OrganOrWriter = "作者";
+        tableName = "NEWS";
+    }
+    String sql = "SELECT * FROM " + tableName + " where id = ?;";
     PreparedStatement ps=conn.prepareStatement(sql);
     ps.setInt(1,id);
     ResultSet rs = ps.executeQuery();
     while (rs.next()) {
-        artic_title = rs.getString(2);
-        image_url = rs.getString(3);
-        vedio_url = rs.getString(4);
-        articel = rs.getString(5);
+        organizer = rs.getString(2);
+        articel = rs.getString(3);
+        artic_title = rs.getString(4);
+        image_url = rs.getString(5);
+        vedio_url = rs.getString(6);
     }
     rs.close();
     ps.close();
     conn.close();
 %>
+
+
 <header>
     <nav>
         <div class="container">
@@ -82,6 +99,8 @@
                         <figure id="img1"><img src="images/userImg/<%=image_url%>" alt="" height="200" width="300"></figure>
                         <p style="word-wrap: break-word; font-size: large; line-height: 30px"><%=articel%>
                         </p>
+                        <br>
+                        <div style="text-align: right; font-size: x-large"><%=OrganOrWriter%>:<%=organizer%></div>
                     </div>
                 </div>
             </div>

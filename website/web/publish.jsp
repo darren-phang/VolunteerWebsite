@@ -11,6 +11,7 @@
 
     <title>Title</title>
     <script type="text/javascript" src="js/html5.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css" media="all">
 
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
@@ -70,6 +71,7 @@
                                style="display: none">
                         <input name="other" id="other" type="text" value="null"
                                style="display: none">
+                        <input name="organizer" type="text" value="<%=uesrname%>" style="display: none;">
                         <%--<form action="UploadServlet" method="post" enctype="multipart/form-data"--%>
                         <%--style="text-align: center;" id="imgform">--%>
                         <%--</form>--%>
@@ -183,7 +185,8 @@
     }
 
     function textSubmit() {
-        document.getElementById('textAndImg').setAttribute("action", "insertArticle2DB.jsp");
+        // document.getElementById('textAndImg').setAttribute("action", "insertArticle2DB.jsp");
+        document.getElementById('textAndImg').setAttribute("action", "insertActivity2DB.jsp");
     }
 </script>
 </body>

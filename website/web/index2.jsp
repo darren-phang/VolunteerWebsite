@@ -222,43 +222,43 @@
                     <div class="clearfix">
                         <div class="grid3 first">
                             <ul class="list3">
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[0]%>"><%=titles[0]%>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[0]%>"><%=titles[0]%>
                                 </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[1]%>"><%=titles[1]%>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[1]%>"><%=titles[1]%>
                                 </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[2]%>"><%=titles[2]%>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[2]%>"><%=titles[2]%>
                                 </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[3]%>"><%=titles[3]%>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[3]%>"><%=titles[3]%>
                                 </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[4]%>"><%=titles[4]%>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="grid3">
-                            <ul class="list3">
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[5]%>"><%=titles[5]%>
-                                </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[6]%>"><%=titles[6]%>
-                                </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[7]%>"><%=titles[7]%>
-                                </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[8]%>"><%=titles[8]%>
-                                </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[9]%>"><%=titles[9]%>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[4]%>"><%=titles[4]%>
                                 </a></li>
                             </ul>
                         </div>
                         <div class="grid3">
                             <ul class="list3">
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[10]%>"><%=titles[10]%>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[5]%>"><%=titles[5]%>
                                 </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[11]%>"><%=titles[11]%>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[6]%>"><%=titles[6]%>
                                 </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[12]%>"><%=titles[12]%>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[7]%>"><%=titles[7]%>
                                 </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[13]%>"><%=titles[13]%>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[8]%>"><%=titles[8]%>
                                 </a></li>
-                                <li><a target="_blank" href="news.jsp?id=<%=hrefs[14]%>"><%=titles[14]%>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[9]%>"><%=titles[9]%>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <div class="grid3">
+                            <ul class="list3">
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[10]%>"><%=titles[10]%>
+                                </a></li>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[11]%>"><%=titles[11]%>
+                                </a></li>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[12]%>"><%=titles[12]%>
+                                </a></li>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[13]%>"><%=titles[13]%>
+                                </a></li>
+                                <li><a target="_blank" href="newsAndActivity.jsp?action=news&id=<%=hrefs[14]%>"><%=titles[14]%>
                                 </a></li>
                             </ul>
                         </div>

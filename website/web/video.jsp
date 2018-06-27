@@ -37,7 +37,7 @@
 </head>
 
 <body>
-
+<%@ include file="logincookie.jsp"%>
 <%@ include file="db.jsp" %>
 <%
     String getSlideSql = "SELECT * FROM video where slideVideo =1";
@@ -90,107 +90,42 @@
 <header>
     <!--Navigation-->
     <nav style="background-color:#1f1f1f ">
-        <div class="container" style="width: 1200px">
-            <h1><a href="index.jsp"><strong>志愿者</strong>服务</a></h1>
-            <div class="collapse navbar-collapse">
+        <div class="container">
+            <div class="wrapper">
+                <h1><a href="index.jsp"><strong>志愿者</strong>服务</a></h1>
                 <ul>
-                    <li class="dropdown"><a href="index.jsp" class="dropdown-toggle"
-                                            data-toggle="dropdown">文明你我</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 80px;">
-                            <div class="dropdown-inner" style="background-color: #1f1f1f;">
-                                <ul>
-                                    <li><a style="color: white " href="index.jsp">热门</a>
-                                    </li>
-                                    <li><a style="color: white " href="index.jsp">最新</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown">志愿者APP</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 111px">
-                            <div class="dropdown-inner" style="background-color: #1f1f1f;">
-                                <ul>
-                                    <li><a style="color: white; " href="index1.jsp">项目介绍</a></li>
-                                    <li><a style="color: white; " href="index1.jsp">新闻专栏</a></li>
-                                    <li><a style="color: white; " href="index1.jsp">志愿招募</a></li>
-                                    <li><a style="color: white; " href="index1.jsp">活动地图</a></li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown">志愿者网</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 111px;">
-                            <div class="dropdown-inner" style="background-color: #d92a7d;">
-                                <ul>
-                                    <li><a style="color: white " href="index2.jsp">项目介绍</a></li>
-                                    <li><a style="color: white " href="index2.jsp">新闻专栏</a></li>
-                                    <li><a style="color: white " href="index2.jsp">宣传视频</a></li>
-                                    <li><a style="color: white " href="index2.jsp">专题活动</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown">雷锋热线</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 111px;">
-                            <div class="dropdown-inner" style="background-color: #1f1f1f;">
-                                <ul>
-                                    <li><a style="color: white " href="index3.jsp">项目介绍</a></li>
-                                    <li><a style="color: white " href="index3.jsp">新闻专栏</a></li>
-                                    <li><a style="color: white " href="index3.jsp">我要求助</a></li>
-                                    <li><a style="color: white " href="index3.jsp">我要帮扶</a></li>
-                                    <li><a style="color: white " href="index3.jsp">品牌活动</a></li>
-                                    <li><a style="color: white " href="index3.jsp">宣传视频</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown">公益活动</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 125px;">
-                            <div class="dropdown-inner" style="background-color: #1f1f1f;">
-                                <ul>
-                                    <li><a style="color: white " href="index4.jsp">让轮椅飞</a></li>
-                                    <li><a style="color: white " href="index4.jsp">名师一堂课</a></li>
-                                    <li><a style="color: white " href="index4.jsp">睡前讲故事</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="dropdown"><a href="#" class="dropdown-toggle"
-                                            data-toggle="dropdown">公益广告</a>
-                        <div class="dropdown-menu" style="background-color: #1f1f1f; width: 208px;">
-                            <div class="dropdown-inner" style="background-color: #1f1f1f;">
-                                <ul>
-                                    <li><a style="color: white " href="index5.jsp">图说我们的价值观</a>
-                                    </li>
-                                    <li><a style="color: white " href="index5.jsp">“讲文明
-                                        树新风”公益广告</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="dropdown"><a href="http://www.baidu.com"
-                                            class="dropdown-toggle current"
-                                            data-toggle="dropdown">视频展示</a>
-                    </li>
-                    <li><a href="video.jsp">上传视频</a></li>
+                    <li><a href="index.jsp">文明你我</a></li>
+                    <li><a href="index1.jsp">志愿者APP</a></li>
+                    <li><a href="index2.jsp">志愿者网</a></li>
+                    <li><a href="index3.jsp">雷锋热线</a></li>
+                    <li><a href="index4.jsp">公益活动</a></li>
+                    <li><a href="index5.jsp">公益广告</a></li>
+                    <li><a href="video.jsp" class="current">视频展示</a></li>
+                    <li><a href="publish.jsp">发布文章</a></li>
                 </ul>
-
             </div>
         </div>
     </nav>
+    <section class="adv-content">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li>首页</li>
+            </ul>
+            <form action="" id="search-form">
+                <fieldset>
+                    <div id="login1">
+                        <a href="LoginAndRegister.jsp?action=login">登陆</a>&nbsp;&nbsp;
+                        <a href="LoginAndRegister.jsp?action=register">去注册</a>
+                    </div>
+                    <div id="login2" style="display: none">
+                        欢迎你&nbsp; <a href="#"><%=uesrname%></a>&nbsp;
+                        <button id="exit" onclick="logout()">退出登陆</button>
+                    </div>
 
+                </fieldset>
+            </form>
+        </div>
+    </section>
     <div class="header-slide">
         <div id="owl-demo" class="owl-carousel">
         </div>
@@ -352,6 +287,28 @@
 
     initSlideVideos();
 </script>
+<script type="text/javascript">
+    var login = <%=has_login%>;
+    if (login){
+        document.getElementById('login1').style.display = "none";
+        document.getElementById('login2').style.display = "";
+    }
+    else {
+        document.getElementById('login2').style.display = "none";
+        document.getElementById('login1').style.display = "";
+    }
 
+    function logout(){
+        var myDate=new Date();
+        myDate.setTime(-1000);//设置时间
+        var data=document.cookie;
+        var dataArray=data.split("; ");
+        for(var i=0;i<dataArray.length;i++){
+            var varName=dataArray[i].split("=");
+            document.cookie=varName[0]+"=''; expires="+myDate.toGMTString();
+        }
+
+    }
+</script>
 </body>
 </html>
