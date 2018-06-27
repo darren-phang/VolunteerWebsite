@@ -6,10 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.sql.*" %>
 <html lang="en">
 <head>
-    <title></title>
+    <title>志愿者服务中心</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
@@ -29,7 +28,7 @@
 %>
 <%@ include file="db.jsp" %>
 <%
-    //表名
+    //表名5
     String tableName = "HomeNews";
     String sql = "SELECT * FROM " + tableName;
     ResultSet rs = stmt.executeQuery(sql);
@@ -59,12 +58,13 @@
                 <h1><a href="index.jsp"><strong>志愿者</strong>服务</a></h1>
                 <ul>
                     <li><a href="index.jsp" class="current">文明你我</a></li>
-                    <li><a href="index-1.jsp">志愿者APP</a></li>
-                    <li><a href="index-2.jsp">志愿者网</a></li>
-                    <li><a href="index-3.jsp">雷锋热线</a></li>
-                    <li><a href="index-3.jsp">公益活动</a></li>
-                    <li><a href="index-3.jsp">公益广告</a></li>
-                    <li><a href="index5.jsp">视频展示</a></li>
+                    <li><a href="index1.jsp">志愿者APP</a></li>
+                    <li><a href="index2.jsp">志愿者网</a></li>
+                    <li><a href="index3.jsp">雷锋热线</a></li>
+                    <li><a href="index4.jsp">公益活动</a></li>
+                    <li><a href="index5.jsp">公益广告</a></li>
+                    <li><a href="video.jsp">视频展示</a></li>
+                    <li><a href="publish.jsp">发布文章</a></li>
                 </ul>
             </div>
         </div>
