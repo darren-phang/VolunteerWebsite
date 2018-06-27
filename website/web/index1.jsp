@@ -87,7 +87,7 @@
     <div class="middle">
     	<div class="container">
       	<div class="clearfix">
-        	<div class="grid3 first">
+        	<div class="grid5 first">
           	<h2>活动地图</h2>
             <div ><figure><img src="images/2page-img3.jpg" ></figure></div>
             <a href="#" class="more">Read More</a>
