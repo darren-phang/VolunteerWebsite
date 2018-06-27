@@ -1,0 +1,12 @@
+*.iml
+.gradle
+/local.properties
+.idea/*
+videoimages/
+out/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+*.mp4
+
