@@ -67,7 +67,7 @@
 
 </body>
 <script type="text/javascript" language="JavaScript">
-    var redirectUrl = "http://localhost:8080/abc/news.jsp?id=" + <%=autoIncKeyFromApi%>;
+    var redirectUrl = "news.jsp?id=" + <%=autoIncKeyFromApi%>;
     window.location.href=redirectUrl;
 </script>
 </html>

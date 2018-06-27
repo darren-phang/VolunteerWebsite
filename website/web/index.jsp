@@ -53,7 +53,7 @@
 </div>
 <header>
     <nav>
-        <div class="container" style="width: 1200px">
+        <div class="container">
             <div class="wrapper">
                 <h1><a href="index.jsp"><strong>志愿者</strong>服务</a></h1>
                 <ul>

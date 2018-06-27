@@ -194,14 +194,15 @@
                     </video>
                     <br>
                     <div id="output" style="position:absolute;left:0;left:0"><br></div>
-                    <br></div>
+                    <br>
+                </div>
             </div>
         </div>
     </div>
     <div class="top">
         <div class="container">
             <div class="clearfix">
-                <div class="grid3 first">
+                <div class="grid5 first">
                     <h2>新闻专栏</h2>
                     <div class="img-wrap">
                         <figure><img src="images/2page-img3.jpg" alt=""></figure>
@@ -211,8 +212,7 @@
                 </div>
                 <div class="grid9">
                     <h2>热点新闻</h2>
-                    <p style="word-wrap: break-word"><%=importnew%>
-                    </p>
+                    <p style="word-wrap: break-word"><%=importnew%></p>
                     <div class="clearfix">
                         <div class="grid3 first">
                             <ul class="list3">
