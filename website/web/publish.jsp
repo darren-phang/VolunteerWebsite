@@ -171,6 +171,7 @@
             document.getElementById("submitbutton").addEventListener("click", activitySubmit());
         }
     }
+
     function fileschoose() {
         var image = document.getElementById("image");
         var video = document.getElementById("video");
@@ -207,12 +208,12 @@
     }
 
     function textSubmit() {
-        document.getElementById('textAndImg').setAttribute("action", "insertArticle2DB.jsp");
-
+        document.getElementById('textAndImg').setAttribute("action", "insertArticle");
+        console.log("succeed");
     }
 
     function activitySubmit() {
-        document.getElementById('textAndImg').setAttribute("action", "insertActivity2DB.jsp");
+        document.getElementById('textAndImg').setAttribute("action", "insertActivity");
     }
 </script>
 <script type="text/javascript">
@@ -222,8 +223,8 @@
         document.getElementById('login2').style.display = "";
     }
     else {
-        document.getElementById('login2').style.display = "none";
-        document.getElementById('login1').style.display = "";
+        window.location.href='LoginAndRegister.jsp?action=login';
+        alert("请登陆后在发表");
     }
 
     function logout(){

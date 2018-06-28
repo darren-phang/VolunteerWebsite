@@ -17,7 +17,7 @@
     <title>Title</title>
 </head>
 <body>
-<%@include file="db.jsp"%>
+<%@include file="../db.jsp"%>
 <%
     response.setContentType("text/html;charset=utf-8");
     request.setCharacterEncoding("utf-8");

@@ -25,6 +25,8 @@ public class Login extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("utf-8");
         String uid = request.getParameter("uid");
         String pwd = request.getParameter("pwd");
 
@@ -45,7 +47,7 @@ public class Login extends HttpServlet {
             conn = DriverManager.getConnection(url);
             Statement stmt = conn.createStatement();
 
-            String tableName = "user";
+            String tableName = "TheUser";
             String sql = "SELECT * FROM " + tableName + " where username=\"" + uid + "\"and password=\"" + pwd + "\";";
             ResultSet rs = stmt.executeQuery(sql);
             rs.last();

@@ -80,7 +80,7 @@
                         <a href="LoginAndRegister.jsp?action=register">去注册</a>
                     </div>
                     <div id="login2" style="display: none">
-                        欢迎你&nbsp; <a href="#"><%=uesrname%></a>&nbsp;
+                        欢迎你&nbsp; <a href="index7.jsp"><%=uesrname%></a>&nbsp;
                         <button id="exit" onclick="logout()">退出登陆</button>
                     </div>
 

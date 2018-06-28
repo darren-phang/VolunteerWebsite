@@ -17,7 +17,8 @@ import javax.servlet.http.HttpServletResponse;
 public class Register extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
+        response.setContentType("text/html;charset=utf-8");
+        request.setCharacterEncoding("utf-8");
         String uid = request.getParameter("uid");
         String pwd = request.getParameter("pwd");
         String email = request.getParameter("uid");
@@ -39,7 +40,7 @@ public class Register extends HttpServlet {
             conn = DriverManager.getConnection(url);
             Statement stmt = conn.createStatement();
 
-            String sql = "insert into user (username, password, email) values (?, ?, ?)";
+            String sql = "insert into TheUser (username, password, email) values (?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, uid);
             ps.setString(2, pwd);
