@@ -44,8 +44,14 @@
             </ul>
             <form action="" id="search-form">
                 <fieldset>
-
-                    <input type="text" value=""><input type="submit" value="">
+                    <div id="login1">
+                        <a href="LoginAndRegister.jsp?action=login">登陆</a>&nbsp;&nbsp;
+                        <a href="LoginAndRegister.jsp?action=register">去注册</a>
+                    </div>
+                    <div id="login2" style="display: none">
+                        欢迎你&nbsp; <a href="#"><%=uesrname%></a>&nbsp;
+                        <button id="exit" onclick="logout()">退出登陆</button>
+                    </div>
                 </fieldset>
             </form>
         </div>
@@ -56,7 +62,11 @@
         <div class="container">
             <div class="clearfix">
                 <div class="grid9">
-                    <h3>发表文章</h3>
+                    <select id="PublishType" onchange="changeSubmit()">
+                        <option value ="1">发表文章</option>
+                        <option value ="2">发布活动</option>
+                    </select>
+                    <br>
                     <form method="post" action="" id="textAndImg">
                         <textarea name="title" style="height: 30px; width: 600px; font-size: 21px"
                                   wrap="soft"></textarea>
@@ -77,7 +87,7 @@
                         <%--</form>--%>
                         <div style="text-align: right">
                             <%--<a href="#" class="alt" onClick="">发表</a>&nbsp;--%>
-                            <input type="submit" value="发表" onclick="textSubmit()"/>
+                            <input type="submit" id="submitbutton" value="发表"/>
                             <input type="reset" value="取消"/>
                         </div>
                     </form>
@@ -149,6 +159,18 @@
     </div>
 </footer>
 <script type="text/javascript">
+    function changeSubmit() {
+        var index=document.getElementById("PublishType").selectedIndex;
+        console.log(index);
+        if (index == "0"){
+            document.getElementById("submitbutton").addEventListener("click", textSubmit());
+            console.log("text");
+        }
+        else {
+            console.log("activity");
+            document.getElementById("submitbutton").addEventListener("click", activitySubmit());
+        }
+    }
     function fileschoose() {
         var image = document.getElementById("image");
         var video = document.getElementById("video");
@@ -185,8 +207,35 @@
     }
 
     function textSubmit() {
-        // document.getElementById('textAndImg').setAttribute("action", "insertArticle2DB.jsp");
+        document.getElementById('textAndImg').setAttribute("action", "insertArticle2DB.jsp");
+
+    }
+
+    function activitySubmit() {
         document.getElementById('textAndImg').setAttribute("action", "insertActivity2DB.jsp");
+    }
+</script>
+<script type="text/javascript">
+    var login = <%=has_login%>;
+    if (login){
+        document.getElementById('login1').style.display = "none";
+        document.getElementById('login2').style.display = "";
+    }
+    else {
+        document.getElementById('login2').style.display = "none";
+        document.getElementById('login1').style.display = "";
+    }
+
+    function logout(){
+        var myDate=new Date();
+        myDate.setTime(-1000);//设置时间
+        var data=document.cookie;
+        var dataArray=data.split("; ");
+        for(var i=0;i<dataArray.length;i++){
+            var varName=dataArray[i].split("=");
+            document.cookie=varName[0]+"=''; expires="+myDate.toGMTString();
+        }
+
     }
 </script>
 </body>

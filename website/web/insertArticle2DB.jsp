@@ -70,7 +70,7 @@
 
 </body>
 <script type="text/javascript" language="JavaScript">
-    var redirectUrl = "newsAndActivity.jsp?id=" + <%=autoIncKeyFromApi%>;
+    var redirectUrl = "newsAndActivity.jsp?id=" + <%=autoIncKeyFromApi%>+"&action=news";
     window.location.href=redirectUrl;
 </script>
 </html>
