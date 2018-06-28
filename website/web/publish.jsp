@@ -9,7 +9,7 @@
 <html>
 <head>
 
-    <title>Title</title>
+    <title>志愿者服务中心</title>
     <script type="text/javascript" src="js/html5.js"></script>
     <link rel="stylesheet" href="bootstrap.min.css" type="text/css" media="all">
 

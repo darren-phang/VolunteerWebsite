@@ -10,7 +10,7 @@
 <%@ page import="com.sun.org.apache.xpath.internal.operations.Or" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>志愿者服务中心</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">

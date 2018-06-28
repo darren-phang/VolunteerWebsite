@@ -9,7 +9,7 @@
 
 <html>
 <head>
-    <title></title>
+    <title>志愿者服务中心</title>
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">

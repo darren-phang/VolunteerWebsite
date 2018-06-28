@@ -9,7 +9,7 @@
 <%@ page import="java.sql.PreparedStatement" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>志愿者服务中心</title>
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
@@ -117,7 +117,7 @@
                             </td>
                             <td width="40">&nbsp;</td>
                             <td>
-                                <a href="/logout" class="dropdown-toggle" data-close-others="true"
+                                <a href="application.jsp?username=<%=uesrname%>" class="dropdown-toggle" data-close-others="true"
                                    style="text-decoration:none;">
                                     <i class="fa fa-sign-out"></i>
                                     <span style="font-size: large">
