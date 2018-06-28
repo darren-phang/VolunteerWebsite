@@ -139,7 +139,7 @@
                             </td>
                             <td width="40">&nbsp;</td>
                             <td>
-                                <a href="/logout" class="dropdown-toggle" data-close-others="true"
+                                <a href="javascript:void(0);" onclick="logout()" class="dropdown-toggle" data-close-others="true"
                                    style="text-decoration:none;">
                                     <i class="fa fa-sign-out"></i>
                                     <span style="font-size: large">
@@ -205,7 +205,7 @@
                                                 <tr style="height:45px;">
                                                     <td class="lz_td1" align="right"><span>是否为注册志愿者：</span></td>
                                                     <td class="lz_td2">
-                                                        <span><%=isvolunteer%>"</span>
+                                                        <span><%=isvolunteer%></span>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -331,6 +331,17 @@
         document.getElementById("6").style.display = "";
         document.getElementById("7").style.display = "";
 
+    }
+    function logout() {
+        window.location.href = "index.jsp";
+        var myDate = new Date();
+        myDate.setTime(-1000);//设置时间
+        var data = document.cookie;
+        var dataArray = data.split("; ");
+        for (var i = 0; i < dataArray.length; i++) {
+            var varName = dataArray[i].split("=");
+            document.cookie = varName[0] + "=''; expires=" + myDate.toGMTString();
+        }
     }
     function reload() {
         location.reload();
