@@ -9,11 +9,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="icon"href="images/logo.png"type="image/x-icon">
-    <link rel="shortcut icon"href="images/logo.png"type="image/x-icon">
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <title>文件上传</title>
-    <link rel="stylesheet" href="css/buttons.css" type="text/css" media="all">
-    <link rel="stylesheet" href="css/input.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/buttons.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/input.css" type="text/css" media="all">
 </head>
 
 <body>

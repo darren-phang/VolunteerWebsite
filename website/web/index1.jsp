@@ -2,10 +2,15 @@
 
 <html lang="en">
 <head>
+<<<<<<< HEAD
   <title>志愿者服务中心</title>
     <meta charset="utf-8">
     <link rel="icon"href="images/logo.png"type="image/x-icon">
     <link rel="shortcut icon"href="images/logo.png"type="image/x-icon">
+=======
+  <title></title>
+  <meta charset="utf-8">
+>>>>>>> parent of 953a33e... 我要砍人了
   <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
   <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
   <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
@@ -29,6 +34,7 @@
                 <li><a href="index4.jsp">公益活动</a></li>
                 <li><a href="index5.jsp">公益广告</a></li>
                 <li><a href="video.jsp">视频展示</a></li>
+                <li><a href="Image.jsp">图片展示</a></li>
                 <li><a href="publish.jsp">发布文章</a></li>
             </ul>
           </ul>

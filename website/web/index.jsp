@@ -65,6 +65,7 @@
                     <li><a href="index4.jsp">公益活动</a></li>
                     <li><a href="index5.jsp">公益广告</a></li>
                     <li><a href="video.jsp">视频展示</a></li>
+                    <li><a href="Image.jsp">图片展示</a></li>
                     <li><a href="publish.jsp">发布文章</a></li>
                 </ul>
             </div>

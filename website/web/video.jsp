@@ -9,7 +9,7 @@
 
 <html>
 <head>
-    <title>志愿者服务中心</title>
+    <title></title>
     <meta charset="utf-8">
     <link rel="icon"href="images/logo.png"type="image/x-icon">
     <link rel="shortcut icon"href="images/logo.png"type="image/x-icon">
@@ -103,6 +103,7 @@
                     <li><a href="index4.jsp">公益活动</a></li>
                     <li><a href="index5.jsp">公益广告</a></li>
                     <li><a href="video.jsp" class="current">视频展示</a></li>
+                    <li><a href="Image.jsp">图片展示</a></li>
                     <li><a href="publish.jsp">发布文章</a></li>
                 </ul>
             </div>
