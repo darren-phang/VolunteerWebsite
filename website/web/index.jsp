@@ -19,23 +19,71 @@
 </head>
 
 <body>
-<%!
+<%
     int showindex = 0;
     String[] readmore = new String[9];
     String[] lagetitle = new String[9];
     String[] titlemore = new String[9];
     String[] imageUrl = new String[9];
     String[] body = new String[9];
-
+    for (int i = 0; i < 9; i++) {
+        readmore[i] = "";
+        lagetitle[i] = "";
+        titlemore[i] = "";
+        imageUrl[i] = "";
+        body[i] = "";
+    }
 %>
-<%@ include file="logincookie.jsp"%>
+<%@ include file="logincookie.jsp" %>
 <%@ include file="db.jsp" %>
 <%
     //表名5
     String tableName = "HomeNews";
     String sql = "SELECT * FROM " + tableName;
     ResultSet rs = stmt.executeQuery(sql);
-    int i = 0;
+
+
+    int rowAmount = 0;
+    int pageAmount = 0;
+    int pageSize = 7;
+    int pageNow;
+    if (request.getParameter("page") != null) {  //获取网址从传递的数据
+        pageNow = Integer.parseInt(request.getParameter("page"));
+    } else {
+        pageNow = 1;
+    }
+    if (pageNow <= 0) pageNow = 1;
+
+    rs.last();
+    rowAmount = rs.getRow();
+    pageAmount = (rowAmount + pageSize - 1 )/ pageSize;
+
+    if (pageNow > pageAmount) {
+        pageNow = pageAmount;
+    }
+
+    if (pageAmount > 0) {
+        rs.absolute((pageNow - 1) * pageSize + 1);
+        System.out.println("fuck"+((pageNow - 1) * pageSize + 1));
+    }
+
+
+    for (int i = 0; i < pageSize && !rs.isAfterLast(); i++) {
+        readmore[i] = rs.getString(2);
+        lagetitle[i] = rs.getString(3);
+        titlemore[i] = rs.getString(4);
+        imageUrl[i] = rs.getString(5);
+        body[i] = rs.getString(6);
+        rs.next();
+    }
+    lagetitle[7] ="上一页" ;
+    body[7] ="index.jsp?page="+(pageNow-1) ;
+
+    lagetitle[8] ="下一页" ;
+    body[8] ="index.jsp?page="+(pageNow+1) ;
+
+
+ /*   int i = 0;
     while (rs.next()) {
         if (i > 8)
             break;
@@ -46,10 +94,11 @@
 
         body[i] = rs.getString(6);
         i += 1;
-    }
+    }*/
     rs.close();
     stmt.close();
     conn.close();
+
 %>
 
 <header>
@@ -83,7 +132,8 @@
                         <a href="LoginAndRegister.jsp?action=register">去注册</a>
                     </div>
                     <div id="login2" style="display: none">
-                        欢迎你&nbsp; <a href="index7.jsp"><%=uesrname%></a>&nbsp;
+                        欢迎你&nbsp; <a href="index7.jsp"><%=uesrname%>
+                    </a>&nbsp;
                         <button id="exit" onclick="logout()">退出登陆</button>
                     </div>
 
@@ -141,9 +191,9 @@
                         </a></li>
                         <li><a href="#" onmouseenter="changeContent(6)"><%=lagetitle[6]%>
                         </a></li>
-                        <li><a href="#" onmouseenter="changeContent(7)"><%=lagetitle[7]%>
+                        <li><a href="<%=body[7]%>"><%=lagetitle[7]%>
                         </a></li>
-                        <li><a href="#" onmouseenter="changeContent(8)"><%=lagetitle[8]%>
+                        <li><a href="<%=body[8]%>"><%=lagetitle[8]%>
                         </a></li>
                     </ul>
                 </div>
@@ -153,7 +203,7 @@
                     </h2>
                     <p id="newscontent"><%=body[showindex]%>
                     </p>
-                    <p><a id="newsurl" target="_blank" href=<%=readmore[showindex]%> >了解更多</a></p>
+                    <p><a id="newsurl" target="_blank" href=<%=readmore[showindex]%>>了解更多</a></p>
 
                     <section class="images">
                         <figure id="figure1" style="height: 200px; width: 200px  ;"><a><img
@@ -231,12 +281,13 @@
             parent.appendChild(figure);
         }
     }
+
     changeContent(0);
 </script>
 
 <script type="text/javascript">
     var login = <%=has_login%>;
-    if (login){
+    if (login) {
         document.getElementById('login1').style.display = "none";
         document.getElementById('login2').style.display = "";
     }
@@ -245,14 +296,14 @@
         document.getElementById('login1').style.display = "";
     }
 
-    function logout(){
-        var myDate=new Date();
+    function logout() {
+        var myDate = new Date();
         myDate.setTime(-1000);//设置时间
-        var data=document.cookie;
-        var dataArray=data.split("; ");
-        for(var i=0;i<dataArray.length;i++){
-            var varName=dataArray[i].split("=");
-            document.cookie=varName[0]+"=''; expires="+myDate.toGMTString();
+        var data = document.cookie;
+        var dataArray = data.split("; ");
+        for (var i = 0; i < dataArray.length; i++) {
+            var varName = dataArray[i].split("=");
+            document.cookie = varName[0] + "=''; expires=" + myDate.toGMTString();
         }
 
     }
