@@ -64,7 +64,6 @@
 
     if (pageAmount > 0) {
         rs.absolute((pageNow - 1) * pageSize + 1);
-        System.out.println("fuck"+((pageNow - 1) * pageSize + 1));
     }
 
 

@@ -9,17 +9,13 @@
 <%@ page import="java.sql.PreparedStatement" %>
 <html>
 <head>
-<<<<<<< HEAD
-
     <title>志愿者服务中心</title>
     <meta charset="utf-8">
     <link rel="icon"href="images/logo.png"type="image/x-icon">
     <link rel="shortcut icon"href="images/logo.png"type="image/x-icon">
     <link rel="icon"href="images/logo.png"type="image/x-icon">
     <link rel="shortcut icon"href="images/logo.png"type="image/x-icon">
-=======
-    <title>Title</title>
->>>>>>> parent of 953a33e... 我要砍人了
+
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/grid.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
@@ -128,12 +124,7 @@
                             </td>
                             <td width="40">&nbsp;</td>
                             <td>
-<<<<<<< HEAD
                                 <a id="checkRe" href="application.jsp" class="dropdown-toggle" data-close-others="true"
-=======
-                                <a href="/logout" class="dropdown-toggle" data-close-others="true"
->>>>>>> parent of 953a33e... 我要砍人了
-                                   style="text-decoration:none;">
                                     <i class="fa fa-sign-out"></i>
                                     <div id="11">
                                         <span style="font-size: large">

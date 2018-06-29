@@ -123,7 +123,6 @@
         </div>
       </div>
     </div>
-          <div class="img-wrap"><figure><img src="images/2page-img6.jpg"width="460" height="380" style="position: absolute;left:1000px;top:1010px;"alt=""></figure></div>
   </section>
 
   <footer>
