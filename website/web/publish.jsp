@@ -70,7 +70,7 @@
                         <option value ="2">发布活动</option>
                     </select>
                     <br>
-                    <form method="post" action="" id="textAndImg">
+                    <form method="post" action="insertArticle" id="textAndImg">
                         <textarea name="title" style="height: 30px; width: 600px; font-size: 21px"
                                   wrap="soft"></textarea>
                         <br><br>
