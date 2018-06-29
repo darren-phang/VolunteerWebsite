@@ -117,13 +117,19 @@
                             </td>
                             <td width="40">&nbsp;</td>
                             <td>
-                                <a href="application.jsp" class="dropdown-toggle" data-close-others="true"
+                                <a id="checkRe" href="application.jsp" class="dropdown-toggle" data-close-others="true"
                                    style="text-decoration:none;">
                                     <i class="fa fa-sign-out"></i>
-                                    <span style="font-size: large">
+                                    <div id="11">
+                                        <span style="font-size: large">
                                        申请成为志愿者
-                                    </span>
-
+                                        </span>
+                                    </div>
+                                    <div id="12" style="display: none">
+                                        <span style="font-size: large">
+                                       志愿者审核
+                                        </span>
+                                    </div>
                                 </a>
                             </td>
                             <td width="40">&nbsp;</td>
@@ -316,6 +322,12 @@
     });
 </script>
 <script type="text/javascript">
+    if("<%=uesrname%>"=="admin")
+    {
+        document.getElementById("12").style.display="";
+        document.getElementById("11").style.display="none";
+        document.getElementById("checkRe").setAttribute("href","check.jsp");
+    }
     var is_register = "<%=isvolunteer%>";
     console.log(is_register);
     if(is_register!="已注册"){

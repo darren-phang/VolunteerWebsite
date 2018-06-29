@@ -17,7 +17,7 @@
 <body>
 <%@ include file="logincookie.jsp" %>
 <%@ include file="db.jsp" %>
-<%!
+<%
     String[] isvolunteer = new String[10];
     String[] name = new String[10];
     String[] age = new String[10];
@@ -68,6 +68,11 @@
 </div>
 </body>
 <script>
+    var admin = "<%=uesrname%>";
+    if(admin!="admin"){
+        alert("你无权访问");
+        window.location.href = "index.jsp";
+    }
     function accept(name) {
         console.log(name);
         var url = "check?name=" + name + "&action=accept";
@@ -95,14 +100,14 @@
         "            </label>&nbsp;&nbsp;\n" +
         "            <label class=\"control-label\">身份证:<%=identitycard[j]%>\n" +
         "            </label>&nbsp;&nbsp;\n" +
-        "            <button class=\"btn btn-default\" onclick=\"accept(\"<%=name[j]%>\")\">同意</button>\n" +
-        "            <button class=\"btn btn-default\" onclick=\"refuse(\"<%=name[j]%>\")\">拒绝</button>\n" +
+        "            <button class=\"btn btn-default\" onclick='accept(\"<%=name[j]%>\")'>同意</button>\n" +
+        "            <button class=\"btn btn-default\" onclick='refuse(\"<%=name[j]%>\")'>拒绝</button>\n" +
         "        </div>";
 
     var div = document.createElement("div");
     div.innerHTML = one;
     parent.appendChild(div);
-    document.getElementById("")
+    document.getElementById("");
     <% }%>
 </script>
 </html>
