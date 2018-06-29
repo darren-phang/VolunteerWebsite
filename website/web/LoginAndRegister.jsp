@@ -125,6 +125,9 @@
 %>
 <head>
     <title>登录注册</title>
+    <meta charset="utf-8">
+    <link rel="icon"href="images/logo.png"type="image/x-icon">
+    <link rel="shortcut icon"href="images/logo.png"type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-2.1.1.js"></script>

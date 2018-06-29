@@ -10,6 +10,9 @@
 <head>
 
     <title>志愿者服务中心</title>
+    <meta charset="utf-8">
+    <link rel="icon"href="images/logo.png"type="image/x-icon">
+    <link rel="shortcut icon"href="images/logo.png"type="image/x-icon">
     <script type="text/javascript" src="js/html5.js"></script>
     <link rel="stylesheet" href="bootstrap.min.css" type="text/css" media="all">
 

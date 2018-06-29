@@ -8,6 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <html>
 <head>
+    <meta charset="utf-8">
+    <link rel="icon"href="images/logo.png"type="image/x-icon">
+    <link rel="shortcut icon"href="images/logo.png"type="image/x-icon">
     <title>消息提示</title>
 </head>
 <body>

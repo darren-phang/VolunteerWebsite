@@ -11,6 +11,8 @@
 <head>
     <title>志愿者服务中心</title>
     <meta charset="utf-8">
+    <link rel="icon"href="images/logo.png"type="image/x-icon">
+    <link rel="shortcut icon"href="images/logo.png"type="image/x-icon">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
     <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
