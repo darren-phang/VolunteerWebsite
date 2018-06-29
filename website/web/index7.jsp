@@ -117,7 +117,7 @@
                             </td>
                             <td width="40">&nbsp;</td>
                             <td>
-                                <a href="application.jsp?username=<%=uesrname%>" class="dropdown-toggle" data-close-others="true"
+                                <a href="application.jsp" class="dropdown-toggle" data-close-others="true"
                                    style="text-decoration:none;">
                                     <i class="fa fa-sign-out"></i>
                                     <span style="font-size: large">
