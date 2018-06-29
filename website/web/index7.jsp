@@ -175,7 +175,7 @@
                                     <tr>
                                         <div class="zc_a_box_title" style="font-size: larger;color: green;">基本信息</div>
                                         <td width="230" height="100">
-                                            <img src="images/BG.jpg">
+                                            <img src="images/bg.jpg">
                                         </td>
                                         <td>
                                             <table cellpadding="0" cellspacing="0" border="0">

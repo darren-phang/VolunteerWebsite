@@ -129,7 +129,7 @@
                 <div style="position:relative"><br>
                     <h2>宣传视频</h2>
                     <div class="img-wrap">
-                        <embed src="videos/myvideo.avi" width="800" height="500"></embed>
+                        <embed src="https://www.strivexj.com/myfiles/video/video8.mp4" width="800" height="500"></embed>
                     </div>
                     <br>
                     <div id="output" style="position:absolute;left:0;left:0"><br></div>
